@@ -6,97 +6,213 @@
   <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory in Neduvannoor, Aluva. Minutes from Cochin Airport, Railway, and Metro. Daily transit stays, rooftop lounge, games, and cycle rentals.">
   <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, transit stay Kerala, backpacker dorms Ernakulam, daily room rent Neduvannoor, hostel near Aluva railway, stay near Aluva metro">
   <title>Cowboy Dorms | AC Transit Dormitory Near Cochin Airport</title>
+  
+  <!-- Google Fonts & FontAwesome for Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    body { background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
-    header { background: #0f172a; color: #ffffff; padding: 3rem 1.5rem; text-align: center; }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; color: #94a3b8; }
-    .container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
-    .card { background: #ffffff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
-    h2 { color: #0f172a; margin-bottom: 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
-    ul { list-style-position: inside; margin-bottom: 1rem; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .alert { background: #fee2e2; color: #991b1b; padding: 0.75rem; border-radius: 6px; text-align: center; font-weight: bold; margin-bottom: 1.5rem; }
-    .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-    .btn { flex: 1; min-width: 200px; padding: 1rem; text-align: center; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; color: white; }
-    .btn-whatsapp { background: #25D366; }
-    .btn-call { background: #2563eb; }
-    .btn-email { background: #475569; }
+    /* CSS Variables for Consistent Branding */
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #3b82f6;
+      --text-main: #333333;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+
+    /* Sticky Navigation */
+    nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
+    .nav-links a { margin-left: 1.5rem; text-decoration: none; color: var(--text-main); font-weight: 600; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--accent-color); }
+    .nav-cta { background: var(--accent-color); color: var(--white) !important; padding: 0.5rem 1.2rem; border-radius: 5px; }
+
+    /* Hero Section */
+    .hero { 
+      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; 
+      height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; 
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
+    .btn { padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 700; transition: opacity 0.3s; display: inline-block; margin: 0.5rem; }
+    .btn-primary { background: var(--accent-color); color: var(--white); }
+    .btn-whatsapp { background: #25D366; color: var(--white); }
     .btn:hover { opacity: 0.9; }
-    .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.5rem; background: #e2e8f0; padding: 1rem; text-align: center; border-radius: 6px; color: #64748b; }
+
+    /* Notice Bar */
+    .notice-bar { background: #fee2e2; color: #991b1b; text-align: center; padding: 1rem; font-weight: 700; letter-spacing: 1px; }
+
+    /* General Section Styling */
+    section { padding: 5rem 5%; }
+    .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--primary-color); }
+    
+    /* Rooms Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card-img { height: 200px; background: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.9rem; }
+    .card-content { padding: 1.5rem; }
+    .card-content h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.4rem; }
+    .card-content ul { list-style: none; margin-bottom: 1.5rem; }
+    .card-content ul li { margin-bottom: 0.5rem; display: flex; align-items: center; }
+    .card-content ul li i { color: var(--accent-color); margin-right: 10px; width: 20px; }
+
+    /* Amenities Features */
+    .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center; }
+    .amenity-box { background: var(--white); padding: 2rem 1rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .amenity-box i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
+    .amenity-box h4 { margin-bottom: 0.5rem; color: var(--primary-color); }
+
+    /* Footer */
+    footer { background: var(--primary-color); color: var(--white); padding: 3rem 5%; text-align: center; }
+    .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+    .footer-content div { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
+    .footer-content a { color: var(--white); text-decoration: none; }
+    
+    /* Floating WhatsApp Button */
+    .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: transform 0.3s; }
+    .float-wa:hover { transform: scale(1.1); }
+
+    @media(max-width: 768px) {
+      .nav-links { display: none; } /* Simplified mobile nav for a clean look */
+      .hero h1 { font-size: 2rem; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Cowboy Dorms</h1>
-    <p>Neduvannoor, Aluva • Premium AC Dormitory Near Cochin Airport</p>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">COWBOY DORMS</a>
+    <div class="nav-links">
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="tel:+919446842216" class="nav-cta">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Premium Transit Stay</h1>
+    <p>Neduvannoor, Aluva • Minutes from Cochin International Airport, Metro & Railway</p>
+    <div>
+      <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+    </div>
   </header>
-  
-  <main class="container">
-    <div class="alert">Daily Transit Stays Only – No Monthly Rentals</div>
 
-    <section class="card">
-      <h2>Accommodations & Pricing</h2>
-      <div class="features">
-        <div>
-          <h3>Ground Floor Dorm (250 sqft)</h3>
-          <ul>
-            <li>8 Premium AC Bed Spaces</li>
-            <li>Shared Bathrooms</li>
-          </ul>
-        </div>
-        <div>
-          <h3>First Floor Dorm (450 sqft)</h3>
-          <ul>
-            <li>16 Premium AC Bed Spaces</li>
-            <li>Secure Luggage Storage</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <!-- Notice Bar -->
+  <div class="notice-bar">
+    <i class="fas fa-info-circle"></i> Daily Transit Stays Only – No Monthly Rentals
+  </div>
 
-    <section class="card">
-      <h2>Hostel Vibe & Amenities</h2>
-      <div class="features">
-        <div>
-          <h3>Relax & Play</h3>
+  <!-- Rooms Section -->
+  <section id="rooms">
+    <h2 class="section-title">Our Accommodations</h2>
+    <div class="grid">
+      
+      <div class="card">
+        <div class="card-img">[Replace with 250 sqft Room Image]</div>
+        <div class="card-content">
+          <h3>Ground Floor Dormitory</h3>
           <ul>
-            <li>Rooftop Lounge with Bean Bags</li>
-            <li>Indoor Games: Chess & Carrom</li>
-            <li>Outdoor Badminton Area</li>
+            <li><i class="fas fa-bed"></i> 8 Premium Bed Spaces</li>
+            <li><i class="fas fa-snowflake"></i> Fully Air Conditioned</li>
+            <li><i class="fas fa-expand-arrows-alt"></i> 250 sqft Layout</li>
+            <li><i class="fas fa-bath"></i> Access to Shared Bathrooms</li>
           </ul>
-        </div>
-        <div>
-          <h3>Travel & Transit</h3>
-          <ul>
-            <li>Bicycle Rentals to Explore Aluva</li>
-            <li>Airport Pickup & Drop (Extra Cost)</li>
-            <li>Minutes to Metro, Railway & Restaurants</li>
-          </ul>
+          <a href="https://wa.me/919446842216" class="btn btn-primary" style="width: 100%; text-align: center;">Check Availability</a>
         </div>
       </div>
-    </section>
 
-    <section class="card">
-      <h2>Gallery</h2>
-      <div class="photo-grid">
-        <div>[Upload Dorm Photo 1]</div>
-        <div>[Upload Building Photo]</div>
-        <div>[Upload Rooftop Photo]</div>
+      <div class="card">
+        <div class="card-img">[Replace with 450 sqft Room Image]</div>
+        <div class="card-content">
+          <h3>First Floor Dormitory</h3>
+          <ul>
+            <li><i class="fas fa-bed"></i> 16 Premium Bed Spaces</li>
+            <li><i class="fas fa-snowflake"></i> Fully Air Conditioned</li>
+            <li><i class="fas fa-expand-arrows-alt"></i> 450 sqft Layout</li>
+            <li><i class="fas fa-suitcase-rolling"></i> Secure Luggage Storage</li>
+          </ul>
+          <a href="https://wa.me/919446842216" class="btn btn-primary" style="width: 100%; text-align: center;">Check Availability</a>
+        </div>
       </div>
-      <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem;">(Upload your photos to GitHub and link them here)</p>
-    </section>
 
-    <section class="card">
-      <h2>Book Your Bed Instantly</h2>
-      <p>Contact us directly for immediate reservation and real-time availability.</p>
-      <div class="cta-buttons">
-        <a class="btn btn-whatsapp" href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms%20for%20a%20daily%20stay.">WhatsApp Us</a>
-        <a class="btn btn-call" href="tel:+919446842216">Call +91 9446842216</a>
-        <a class="btn btn-email" href="mailto:cowboydorms@gmail.com">Email Us</a>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
+  <section id="amenities" style="background-color: #e2e8f0;">
+    <h2 class="section-title">Hostel Vibe & Facilities</h2>
+    <div class="amenities-grid">
+      <div class="amenity-box">
+        <i class="fas fa-couch"></i>
+        <h4>Rooftop Lounge</h4>
+        <p>Relax on bean bags in our dedicated open-air space.</p>
       </div>
-    </section>
-  </main>
+      <div class="amenity-box">
+        <i class="fas fa-chess"></i>
+        <h4>Indoor Games</h4>
+        <p>Unwind with a game of Chess or Carrom.</p>
+      </div>
+      <div class="amenity-box">
+        <i class="fas fa-table-tennis"></i>
+        <h4>Outdoor Badminton</h4>
+        <p>Stretch your legs with badminton in the ground area.</p>
+      </div>
+      <div class="amenity-box">
+        <i class="fas fa-bicycle"></i>
+        <h4>Cycle Rentals</h4>
+        <p>Rent a bicycle to explore local restaurants and Aluva.</p>
+      </div>
+      <div class="amenity-box">
+        <i class="fas fa-plane-departure"></i>
+        <h4>Airport Pickup/Drop</h4>
+        <p>Seamless airport transfers available (at extra cost).</p>
+      </div>
+      <div class="amenity-box">
+        <i class="fas fa-map-marked-alt"></i>
+        <h4>Prime Location</h4>
+        <p>Highly accessible to Railway, Metro, and local eateries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2 class="section-title">Property Gallery</h2>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <div class="card-img" style="height: 200px; border-radius: 8px;">[Upload Dorm Photo]</div>
+      <div class="card-img" style="height: 200px; border-radius: 8px;">[Upload Building Photo]</div>
+      <div class="card-img" style="height: 200px; border-radius: 8px;">[Upload Rooftop Photo]</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div>
+        <i class="fas fa-phone-alt"></i> <a href="tel:+919446842216">+91 9446842216</a>
+      </div>
+      <div>
+        <i class="fas fa-envelope"></i> <a href="mailto:cowboydorms@gmail.com">cowboydorms@gmail.com</a>
+      </div>
+      <div>
+        <i class="fas fa-map-marker-alt"></i> Neduvannoor, Aluva, Kerala
+      </div>
+    </div>
+    <p>&copy; 2026 Cowboy Dorms. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Floating WhatsApp Widget -->
+  <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="float-wa" target="_blank" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
 </body>
 </html>
