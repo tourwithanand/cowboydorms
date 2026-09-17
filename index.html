@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory located 4km from Cochin Airport (COK). Neat, clean, budget transit stays with premium bunk beds, rooftop lounge, and games.">
+  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory located 4km from Cochin Airport (COK). Neat, hygienic, budget transit stays with premium bunk beds, open kitchen, and games.">
   <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, transit stay Kerala, backpacker dorms Ernakulam, daily room rent Neduvannoor, premium bunk beds">
   <title>Cowboy Dorms | Premium Bunk Beds Near Cochin Airport</title>
   
@@ -36,7 +36,8 @@
       height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; 
     }
     .hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    .hero p { font-size: 1.5rem; margin-bottom: 2rem; font-weight: 300; }
+    .hero p { font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 300; }
+    .timings { font-size: 1.1rem; font-weight: 600; background: rgba(255, 255, 255, 0.2); padding: 0.5rem 1rem; border-radius: 5px; margin-bottom: 2rem; }
     .hero-icons { display: flex; gap: 1.5rem; }
     .hero-icons a { display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; border-radius: 50%; font-size: 2rem; color: var(--white); text-decoration: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
     .hero-icons .icon-wa { background-color: #25D366; }
@@ -44,12 +45,12 @@
     .hero-icons a:hover { transform: scale(1.1); }
 
     /* Availability Form Section */
-    .booking-section { background: var(--white); padding: 2rem 5%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: -50px auto 3rem; max-width: 900px; border-radius: 10px; position: relative; z-index: 10; }
+    .booking-section { background: var(--white); padding: 2rem 5%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: -50px auto 3rem; max-width: 1000px; border-radius: 10px; position: relative; z-index: 10; }
     .booking-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
-    .form-group { flex: 1; min-width: 150px; display: flex; flex-direction: column; }
+    .form-group { flex: 1; min-width: 140px; display: flex; flex-direction: column; }
     .form-group label { font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.3rem; }
-    .form-group input { padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; }
-    .btn-submit { background: var(--accent-color); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 5px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.3s; margin-top: 1.4rem; }
+    .form-group input, .form-group select { padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; }
+    .btn-submit { background: var(--accent-color); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 5px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.3s; margin-top: 1.4rem; white-space: nowrap; }
     .btn-submit:hover { background: #2563eb; }
 
     /* General Layout */
@@ -60,7 +61,7 @@
     /* About Content */
     .about-content { text-align: center; max-width: 800px; margin: 0 auto; }
     .about-content p { font-size: 1.1rem; margin-bottom: 2rem; }
-    .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
     .btn { padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 700; color: var(--white); transition: opacity 0.3s; }
     .btn-wa-solid { background: #25D366; }
     .btn-call-solid { background: var(--primary-color); }
@@ -110,6 +111,7 @@
   <header class="hero">
     <h1>Premium Bunk Beds</h1>
     <p>Located near Cochin International Airport</p>
+    <div class="timings"><i class="fas fa-clock"></i> Check-In: 2:00 PM &nbsp;|&nbsp; Check-Out: 11:00 AM</div>
     <div class="hero-icons">
       <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="icon-wa" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
       <a href="tel:+919446842216" class="icon-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
@@ -122,6 +124,10 @@
       <div class="form-group">
         <label for="guestName">Name</label>
         <input type="text" id="guestName" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="bedCount">No. of Beds</label>
+        <input type="number" id="bedCount" min="1" max="24" value="1" required>
       </div>
       <div class="form-group">
         <label for="checkIn">Check-In</label>
@@ -139,7 +145,8 @@
   <section id="about">
     <div class="about-content">
       <h2 class="section-title">Your Ultimate Transit Basecamp</h2>
-      <p>Located just <strong>4km away from Cochin International Airport (COK)</strong>, Cowboy Dorms is designed for modern travelers, backpackers, and transit riders. We offer exceptionally neat, daily-cleaned, fully air-conditioned dormitories. With easy access to Aluva Metro, Railway Station, and local restaurants, plus seamless airport pickup and drop services, everything you need is right at your fingertips.</p>
+      <p>Located just <strong>4km away from Cochin International Airport (COK)</strong>, Cowboy Dorms is designed for modern travelers, backpackers, and transit riders. We offer exceptionally neat, hygienic, fully air-conditioned dormitories. With easy access to Aluva Metro, Railway Station, and local restaurants, plus seamless airport pickup and drop services, everything you need is right at your fingertips.</p>
+      
       <div class="btn-group">
         <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="btn btn-wa-solid"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
         <a href="tel:+919446842216" class="btn btn-call-solid"><i class="fas fa-phone-alt"></i> Call Directly</a>
@@ -175,8 +182,9 @@
   <!-- Activities & Vibe -->
   <section id="activities">
     <h2 class="section-title">Hostel Vibe & Activities</h2>
-    <p class="section-subtitle">Unwind on the open rooftop, connect with fellow travelers over indoor games, or rent a cycle to explore the neighborhood.</p>
+    <p class="section-subtitle">Unwind on the open rooftop, prepare a meal in our <strong>open kitchen facility</strong>, connect with fellow travelers over indoor games, or rent a cycle to explore the neighborhood.</p>
     <div class="img-grid">
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_kitchen.jpeg" alt="Open Kitchen Facility"></div>
       <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg" alt="Rooftop Lounge Area"></div>
       <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Carrom%20board.jpeg" alt="Indoor Carrom Board"></div>
       <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Chess%20Game.jpeg" alt="Chess Game"></div>
@@ -204,16 +212,15 @@
   <!-- JavaScript for WhatsApp Form Redirection -->
   <script>
     function submitToWhatsApp(event) {
-      event.preventDefault(); // Prevents the page from reloading
+      event.preventDefault(); 
       
       const name = document.getElementById('guestName').value;
+      const bedCount = document.getElementById('bedCount').value;
       const checkIn = document.getElementById('checkIn').value;
       const checkOut = document.getElementById('checkOut').value;
       
-      // Format the message for WhatsApp
-      const message = `Hi Cowboy Dorms, I would like to check bed availability.%0A%0A*Name:* ${name}%0A*Check-In:* ${checkIn}%0A*Check-Out:* ${checkOut}`;
+      const message = `Hi Cowboy Dorms, I would like to check bed availability.%0A%0A*Name:* ${name}%0A*Beds Needed:* ${bedCount}%0A*Check-In:* ${checkIn}%0A*Check-Out:* ${checkOut}`;
       
-      // Redirect to WhatsApp chat with the pre-filled message
       const whatsappUrl = `https://wa.me/919446842216?text=${message}`;
       window.open(whatsappUrl, '_blank');
     }
