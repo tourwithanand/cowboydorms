@@ -3,13 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory in Neduvannoor, Aluva. Minutes from Cochin Airport, Railway, and Metro. Daily transit stays, rooftop lounge, games, and cycle rentals.">
+  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory in Neduvannoor, Aluva. Minutes from Cochin Airport, Railway, and Metro. Budget transit stays, rooftop lounge, games, and cycle rentals.">
   <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, transit stay Kerala, backpacker dorms Ernakulam, daily room rent Neduvannoor, hostel near Aluva railway, stay near Aluva metro">
   <title>Cowboy Dorms | AC Transit Dormitory Near Cochin Airport</title>
   
   <!-- Google Fonts & FontAwesome for Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- SEO Local Business & Hostel Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hostel",
+    "name": "Cowboy Dorms",
+    "image": [
+      "https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg",
+      "https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/green_dormitory_bed.jpeg",
+      "https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg"
+    ],
+    "description": "Premium AC backpacker's dormitory and transit stay in Neduvannoor, Aluva, located just 4km from Cochin International Airport (COK).",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Neduvannoor",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919446842216",
+    "url": "https://cowboydorms.com",
+    "priceRange": "₹600",
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Air Conditioning",
+        "value": "True"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free Wi-Fi",
+        "value": "True"
+      }
+    ]
+  }
+  </script>
 
   <style>
     /* CSS Variables for Consistent Branding */
@@ -33,7 +70,7 @@
 
     /* Hero Section */
     .hero { 
-      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; 
+      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg') center/cover; 
       height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; 
     }
     .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px; }
@@ -43,9 +80,6 @@
     .btn-whatsapp { background: #25D366; color: var(--white); }
     .btn:hover { opacity: 0.9; }
 
-    /* Notice Bar */
-    .notice-bar { background: #fee2e2; color: #991b1b; text-align: center; padding: 1rem; font-weight: 700; letter-spacing: 1px; }
-
     /* General Section Styling */
     section { padding: 5rem 5%; }
     .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--primary-color); }
@@ -54,7 +88,9 @@
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
     .card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
     .card:hover { transform: translateY(-5px); }
-    .card-img { height: 200px; background: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.9rem; }
+    .card-img { height: 250px; background: #cbd5e1; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+    .card:hover .card-img img { transform: scale(1.05); }
     .card-content { padding: 1.5rem; }
     .card-content h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.4rem; }
     .card-content ul { list-style: none; margin-bottom: 1.5rem; }
@@ -78,7 +114,7 @@
     .float-wa:hover { transform: scale(1.1); }
 
     @media(max-width: 768px) {
-      .nav-links { display: none; } /* Simplified mobile nav for a clean look */
+      .nav-links { display: none; }
       .hero h1 { font-size: 2rem; }
     }
   </style>
@@ -105,18 +141,15 @@
     </div>
   </header>
 
-  <!-- Notice Bar -->
-  <div class="notice-bar">
-    <i class="fas fa-info-circle"></i> Daily Transit Stays Only – No Monthly Rentals
-  </div>
-
   <!-- Rooms Section -->
   <section id="rooms">
     <h2 class="section-title">Our Accommodations</h2>
     <div class="grid">
       
       <div class="card">
-        <div class="card-img">[Replace with 250 sqft Room Image]</div>
+        <div class="card-img">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/green_dormitory_bed.jpeg" alt="Ground Floor AC Dormitory Bed">
+        </div>
         <div class="card-content">
           <h3>Ground Floor Dormitory</h3>
           <ul>
@@ -130,7 +163,9 @@
       </div>
 
       <div class="card">
-        <div class="card-img">[Replace with 450 sqft Room Image]</div>
+        <div class="card-img">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/red_dormitory_bed.jpeg" alt="First Floor AC Dormitory Room">
+        </div>
         <div class="card-content">
           <h3>First Floor Dormitory</h3>
           <ul>
@@ -186,10 +221,37 @@
   <!-- Gallery Section -->
   <section id="gallery">
     <h2 class="section-title">Property Gallery</h2>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-      <div class="card-img" style="height: 200px; border-radius: 8px;">[Upload Dorm Photo]</div>
-      <div class="card-img" style="height: 200px; border-radius: 8px;">[Upload Building Photo]</div>
-      <div class="card-img" style="height: 200px; border-radius: 8px;">[Upload Rooftop Photo]</div>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <div class="card">
+        <div class="card-img" style="height: 250px;">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg" alt="Cowboy Dorms Exterior Building">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="height: 250px;">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg" alt="Cowboy Dorms Rooftop Area">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="height: 250px;">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Carrom%20board.jpeg" alt="Carrom Board Indoor Game">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="height: 250px;">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/grey_dormitory_bed.jpeg" alt="Clean Backpacker Bunk Beds">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="height: 250px;">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Restroom.jpeg" alt="Clean Modern Shared Bathrooms">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="height: 250px;">
+          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Bycycle.jpeg" alt="Bicycle Rentals for Backpackers">
+        </div>
+      </div>
     </div>
   </section>
 
