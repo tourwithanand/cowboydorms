@@ -3,53 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory in Neduvannoor, Aluva. Minutes from Cochin Airport, Railway, and Metro. Budget transit stays, rooftop lounge, games, and cycle rentals.">
-  <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, transit stay Kerala, backpacker dorms Ernakulam, daily room rent Neduvannoor, hostel near Aluva railway, stay near Aluva metro">
-  <title>Cowboy Dorms | AC Transit Dormitory Near Cochin Airport</title>
+  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory located 4km from Cochin Airport (COK). Neat, clean, budget transit stays with premium bunk beds, rooftop lounge, and games.">
+  <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, transit stay Kerala, backpacker dorms Ernakulam, daily room rent Neduvannoor, premium bunk beds">
+  <title>Cowboy Dorms | Premium Bunk Beds Near Cochin Airport</title>
   
   <!-- Google Fonts & FontAwesome for Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- SEO Local Business & Hostel Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Hostel",
-    "name": "Cowboy Dorms",
-    "image": [
-      "https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg",
-      "https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/green_dormitory_bed.jpeg",
-      "https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg"
-    ],
-    "description": "Premium AC backpacker's dormitory and transit stay in Neduvannoor, Aluva, located just 4km from Cochin International Airport (COK).",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Neduvannoor",
-      "addressLocality": "Aluva",
-      "addressRegion": "Kerala",
-      "addressCountry": "IN"
-    },
-    "telephone": "+919446842216",
-    "url": "https://cowboydorms.com",
-    "priceRange": "₹600",
-    "amenityFeature": [
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Air Conditioning",
-        "value": "True"
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Free Wi-Fi",
-        "value": "True"
-      }
-    ]
-  }
-  </script>
-
   <style>
-    /* CSS Variables for Consistent Branding */
     :root {
       --primary-color: #0f172a;
       --accent-color: #3b82f6;
@@ -68,54 +30,65 @@
     .nav-links a:hover { color: var(--accent-color); }
     .nav-cta { background: var(--accent-color); color: var(--white) !important; padding: 0.5rem 1.2rem; border-radius: 5px; }
 
-    /* Hero Section */
+    /* Hero Banner Section */
     .hero { 
       background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg') center/cover; 
-      height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; 
+      height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; 
     }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
-    .btn { padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 700; transition: opacity 0.3s; display: inline-block; margin: 0.5rem; }
-    .btn-primary { background: var(--accent-color); color: var(--white); }
-    .btn-whatsapp { background: #25D366; color: var(--white); }
+    .hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .hero p { font-size: 1.5rem; margin-bottom: 2rem; font-weight: 300; }
+    .hero-icons { display: flex; gap: 1.5rem; }
+    .hero-icons a { display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; border-radius: 50%; font-size: 2rem; color: var(--white); text-decoration: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+    .hero-icons .icon-wa { background-color: #25D366; }
+    .hero-icons .icon-call { background-color: var(--accent-color); }
+    .hero-icons a:hover { transform: scale(1.1); }
+
+    /* Availability Form Section */
+    .booking-section { background: var(--white); padding: 2rem 5%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: -50px auto 3rem; max-width: 900px; border-radius: 10px; position: relative; z-index: 10; }
+    .booking-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .form-group { flex: 1; min-width: 150px; display: flex; flex-direction: column; }
+    .form-group label { font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.3rem; }
+    .form-group input { padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; }
+    .btn-submit { background: var(--accent-color); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 5px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.3s; margin-top: 1.4rem; }
+    .btn-submit:hover { background: #2563eb; }
+
+    /* General Layout */
+    section { padding: 4rem 5%; }
+    .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 1rem; color: var(--primary-color); }
+    .section-subtitle { text-align: center; font-size: 1.1rem; color: #64748b; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+    /* About Content */
+    .about-content { text-align: center; max-width: 800px; margin: 0 auto; }
+    .about-content p { font-size: 1.1rem; margin-bottom: 2rem; }
+    .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn { padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 700; color: var(--white); transition: opacity 0.3s; }
+    .btn-wa-solid { background: #25D366; }
+    .btn-call-solid { background: var(--primary-color); }
     .btn:hover { opacity: 0.9; }
 
-    /* General Section Styling */
-    section { padding: 5rem 5%; }
-    .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--primary-color); }
-    
-    /* Rooms Grid */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-    .card-img { height: 250px; background: #cbd5e1; overflow: hidden; }
-    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-    .card:hover .card-img img { transform: scale(1.05); }
-    .card-content { padding: 1.5rem; }
-    .card-content h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.4rem; }
-    .card-content ul { list-style: none; margin-bottom: 1.5rem; }
-    .card-content ul li { margin-bottom: 0.5rem; display: flex; align-items: center; }
-    .card-content ul li i { color: var(--accent-color); margin-right: 10px; width: 20px; }
+    /* Image Grids */
+    .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .img-card { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); height: 250px; }
+    .img-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+    .img-card:hover img { transform: scale(1.05); }
 
-    /* Amenities Features */
-    .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center; }
-    .amenity-box { background: var(--white); padding: 2rem 1rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .amenity-box i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
-    .amenity-box h4 { margin-bottom: 0.5rem; color: var(--primary-color); }
+    /* Restroom Highlight */
+    .restroom-section { background-color: #e2e8f0; }
 
     /* Footer */
     footer { background: var(--primary-color); color: var(--white); padding: 3rem 5%; text-align: center; }
     .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
-    .footer-content div { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
-    .footer-content a { color: var(--white); text-decoration: none; }
-    
+    .footer-content div, .footer-content a { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; color: var(--white); text-decoration: none; }
+
     /* Floating WhatsApp Button */
     .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: transform 0.3s; }
     .float-wa:hover { transform: scale(1.1); }
 
     @media(max-width: 768px) {
       .nav-links { display: none; }
-      .hero h1 { font-size: 2rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1.2rem; }
+      .btn-submit { margin-top: 0; width: 100%; }
     }
   </style>
 </head>
@@ -125,148 +98,100 @@
   <nav>
     <a href="#" class="logo">COWBOY DORMS</a>
     <div class="nav-links">
-      <a href="#rooms">Rooms</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#dormitory">Dormitory</a>
+      <a href="#restrooms">Facilities</a>
+      <a href="#activities">Activities</a>
       <a href="tel:+919446842216" class="nav-cta">Call Now</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Banner Hero Section -->
   <header class="hero">
-    <h1>Premium Transit Stay</h1>
-    <p>Neduvannoor, Aluva • Minutes from Cochin International Airport, Metro & Railway</p>
-    <div>
-      <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+    <h1>Premium Bunk Beds</h1>
+    <p>Located near Cochin International Airport</p>
+    <div class="hero-icons">
+      <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="icon-wa" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+919446842216" class="icon-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
     </div>
   </header>
 
-  <!-- Rooms Section -->
-  <section id="rooms">
-    <h2 class="section-title">Our Accommodations</h2>
-    <div class="grid">
-      
-      <div class="card">
-        <div class="card-img">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/green_dormitory_bed.jpeg" alt="Ground Floor AC Dormitory Bed">
-        </div>
-        <div class="card-content">
-          <h3>Ground Floor Dormitory</h3>
-          <ul>
-            <li><i class="fas fa-bed"></i> 8 Premium Bed Spaces</li>
-            <li><i class="fas fa-snowflake"></i> Fully Air Conditioned</li>
-            <li><i class="fas fa-expand-arrows-alt"></i> 250 sqft Layout</li>
-            <li><i class="fas fa-bath"></i> Access to Shared Bathrooms</li>
-          </ul>
-          <a href="https://wa.me/919446842216" class="btn btn-primary" style="width: 100%; text-align: center;">Check Availability</a>
-        </div>
+  <!-- Availability Lead Form -->
+  <section class="booking-section">
+    <form class="booking-form" onsubmit="submitToWhatsApp(event)">
+      <div class="form-group">
+        <label for="guestName">Name</label>
+        <input type="text" id="guestName" placeholder="Your Name" required>
       </div>
-
-      <div class="card">
-        <div class="card-img">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/red_dormitory_bed.jpeg" alt="First Floor AC Dormitory Room">
-        </div>
-        <div class="card-content">
-          <h3>First Floor Dormitory</h3>
-          <ul>
-            <li><i class="fas fa-bed"></i> 16 Premium Bed Spaces</li>
-            <li><i class="fas fa-snowflake"></i> Fully Air Conditioned</li>
-            <li><i class="fas fa-expand-arrows-alt"></i> 450 sqft Layout</li>
-            <li><i class="fas fa-suitcase-rolling"></i> Secure Luggage Storage</li>
-          </ul>
-          <a href="https://wa.me/919446842216" class="btn btn-primary" style="width: 100%; text-align: center;">Check Availability</a>
-        </div>
+      <div class="form-group">
+        <label for="checkIn">Check-In</label>
+        <input type="date" id="checkIn" required>
       </div>
-
-    </div>
+      <div class="form-group">
+        <label for="checkOut">Check-Out</label>
+        <input type="date" id="checkOut" required>
+      </div>
+      <button type="submit" class="btn-submit">Check Availability</button>
+    </form>
   </section>
 
-  <!-- Amenities Section -->
-  <section id="amenities" style="background-color: #e2e8f0;">
-    <h2 class="section-title">Hostel Vibe & Facilities</h2>
-    <div class="amenities-grid">
-      <div class="amenity-box">
-        <i class="fas fa-couch"></i>
-        <h4>Rooftop Lounge</h4>
-        <p>Relax on bean bags in our dedicated open-air space.</p>
-      </div>
-      <div class="amenity-box">
-        <i class="fas fa-chess"></i>
-        <h4>Indoor Games</h4>
-        <p>Unwind with a game of Chess or Carrom.</p>
-      </div>
-      <div class="amenity-box">
-        <i class="fas fa-table-tennis"></i>
-        <h4>Outdoor Badminton</h4>
-        <p>Stretch your legs with badminton in the ground area.</p>
-      </div>
-      <div class="amenity-box">
-        <i class="fas fa-bicycle"></i>
-        <h4>Cycle Rentals</h4>
-        <p>Rent a bicycle to explore local restaurants and Aluva.</p>
-      </div>
-      <div class="amenity-box">
-        <i class="fas fa-plane-departure"></i>
-        <h4>Airport Pickup/Drop</h4>
-        <p>Seamless airport transfers available (at extra cost).</p>
-      </div>
-      <div class="amenity-box">
-        <i class="fas fa-map-marked-alt"></i>
-        <h4>Prime Location</h4>
-        <p>Highly accessible to Railway, Metro, and local eateries.</p>
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-content">
+      <h2 class="section-title">Your Ultimate Transit Basecamp</h2>
+      <p>Located just <strong>4km away from Cochin International Airport (COK)</strong>, Cowboy Dorms is designed for modern travelers, backpackers, and transit riders. We offer exceptionally neat, daily-cleaned, fully air-conditioned dormitories. With easy access to Aluva Metro, Railway Station, and local restaurants, plus seamless airport pickup and drop services, everything you need is right at your fingertips.</p>
+      <div class="btn-group">
+        <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="btn btn-wa-solid"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+        <a href="tel:+919446842216" class="btn btn-call-solid"><i class="fas fa-phone-alt"></i> Call Directly</a>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2 class="section-title">Property Gallery</h2>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-      <div class="card">
-        <div class="card-img" style="height: 250px;">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg" alt="Cowboy Dorms Exterior Building">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="height: 250px;">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg" alt="Cowboy Dorms Rooftop Area">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="height: 250px;">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Carrom%20board.jpeg" alt="Carrom Board Indoor Game">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="height: 250px;">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/grey_dormitory_bed.jpeg" alt="Clean Backpacker Bunk Beds">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="height: 250px;">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Restroom.jpeg" alt="Clean Modern Shared Bathrooms">
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="height: 250px;">
-          <img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Bycycle.jpeg" alt="Bicycle Rentals for Backpackers">
-        </div>
-      </div>
+  <!-- Bed Spaces Gallery -->
+  <section id="dormitory">
+    <h2 class="section-title">Premium AC Dormitory</h2>
+    <p class="section-subtitle">Comfortable, secure, and fully air-conditioned bunk beds designed for a restful stay.</p>
+    <div class="img-grid">
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/green_dormitory_bed.jpeg" alt="Green Dormitory Bed Space"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/red_dormitory_bed.jpeg" alt="Red Dormitory Bed Space"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/grey_dormitory_bed.jpeg" alt="Grey Dormitory Bed Space"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/coffee_dormitory_bed.jpeg" alt="Coffee Dormitory Bed Space"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/left_side_dorms.jpeg" alt="Dormitory Left View"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/right_side_dorms.jpeg" alt="Dormitory Right View"></div>
+    </div>
+  </section>
+
+  <!-- Restroom Facilities Highlight -->
+  <section id="restrooms" class="restroom-section">
+    <h2 class="section-title">Pristine Restroom Facilities</h2>
+    <p class="section-subtitle">We prioritize hygiene. Enjoy exceptionally clean, modern shared bathrooms with a highly favorable guest-to-bathroom ratio.</p>
+    <div class="img-grid">
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Restroom.jpeg" alt="Modern Washroom"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Toilet.jpeg" alt="Clean Toilet"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/restroom_path.jpeg" alt="Restroom Pathway"></div>
+    </div>
+  </section>
+
+  <!-- Activities & Vibe -->
+  <section id="activities">
+    <h2 class="section-title">Hostel Vibe & Activities</h2>
+    <p class="section-subtitle">Unwind on the open rooftop, connect with fellow travelers over indoor games, or rent a cycle to explore the neighborhood.</p>
+    <div class="img-grid">
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg" alt="Rooftop Lounge Area"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Carrom%20board.jpeg" alt="Indoor Carrom Board"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Chess%20Game.jpeg" alt="Chess Game"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Soft-Tip%20Darts.jpeg" alt="Soft-Tip Darts Board"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Playing%20Badminton.jpeg" alt="Outdoor Badminton"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Bycycle.jpeg" alt="Bicycle Rentals"></div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="contact">
+  <footer>
     <div class="footer-content">
-      <div>
-        <i class="fas fa-phone-alt"></i> <a href="tel:+919446842216">+91 9446842216</a>
-      </div>
-      <div>
-        <i class="fas fa-envelope"></i> <a href="mailto:cowboydorms@gmail.com">cowboydorms@gmail.com</a>
-      </div>
-      <div>
-        <i class="fas fa-map-marker-alt"></i> Neduvannoor, Aluva, Kerala
-      </div>
+      <a href="tel:+919446842216"><i class="fas fa-phone-alt"></i> +91 9446842216</a>
+      <a href="mailto:cowboydorms@gmail.com"><i class="fas fa-envelope"></i> cowboydorms@gmail.com</a>
+      <div><i class="fas fa-map-marker-alt"></i> Neduvannoor, Aluva, Kerala</div>
     </div>
     <p>&copy; 2026 Cowboy Dorms. All Rights Reserved.</p>
   </footer>
@@ -275,6 +200,24 @@
   <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="float-wa" target="_blank" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- JavaScript for WhatsApp Form Redirection -->
+  <script>
+    function submitToWhatsApp(event) {
+      event.preventDefault(); // Prevents the page from reloading
+      
+      const name = document.getElementById('guestName').value;
+      const checkIn = document.getElementById('checkIn').value;
+      const checkOut = document.getElementById('checkOut').value;
+      
+      // Format the message for WhatsApp
+      const message = `Hi Cowboy Dorms, I would like to check bed availability.%0A%0A*Name:* ${name}%0A*Check-In:* ${checkIn}%0A*Check-Out:* ${checkOut}`;
+      
+      // Redirect to WhatsApp chat with the pre-filled message
+      const whatsappUrl = `https://wa.me/919446842216?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
 
 </body>
 </html>
