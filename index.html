@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory located 4km from Cochin Airport (COK). Neat, hygienic, budget transit stays with premium bunk beds, open kitchen, and games.">
   <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, transit stay Kerala, backpacker dorms Ernakulam, daily room rent Neduvannoor, premium bunk beds">
   <title>Cowboy Dorms | Premium Bunk Beds Near Cochin Airport</title>
@@ -26,9 +26,10 @@
     /* Sticky Navigation */
     nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
-    .nav-links a { margin-left: 1.5rem; text-decoration: none; color: var(--text-main); font-weight: 600; transition: color 0.3s; }
+    .nav-menu { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; transition: color 0.3s; margin-right: 1rem; }
     .nav-links a:hover { color: var(--accent-color); }
-    .nav-cta { background: var(--accent-color); color: var(--white) !important; padding: 0.5rem 1.2rem; border-radius: 5px; }
+    .nav-cta { background: var(--accent-color); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: 600; }
 
     /* Hero Banner Section */
     .hero { 
@@ -45,12 +46,13 @@
     .hero-icons a:hover { transform: scale(1.1); }
 
     /* Availability Form Section */
-    .booking-section { background: var(--white); padding: 2rem 5%; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin: -50px auto 3rem; max-width: 1000px; border-radius: 10px; position: relative; z-index: 10; }
-    .booking-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .booking-section { background: var(--white); padding: 2rem 5%; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: -50px auto 3rem; max-width: 1000px; border-radius: 10px; position: relative; z-index: 10; width: 90%; }
+    .booking-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; }
     .form-group { flex: 1; min-width: 140px; display: flex; flex-direction: column; }
-    .form-group label { font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.3rem; }
-    .form-group input, .form-group select { padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; }
-    .btn-submit { background: var(--accent-color); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 5px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.3s; margin-top: 1.4rem; white-space: nowrap; }
+    .form-group label { font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.4rem; }
+    .form-group input { padding: 1rem; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; width: 100%; outline: none; transition: border-color 0.3s; }
+    .form-group input:focus { border-color: var(--accent-color); }
+    .btn-submit { background: var(--accent-color); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 5px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; white-space: nowrap; height: 100%; }
     .btn-submit:hover { background: #2563eb; }
 
     /* General Layout */
@@ -62,13 +64,13 @@
     .about-content { text-align: center; max-width: 800px; margin: 0 auto; }
     .about-content p { font-size: 1.1rem; margin-bottom: 2rem; }
     .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .btn { padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 700; color: var(--white); transition: opacity 0.3s; }
+    .btn { padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 700; color: var(--white); transition: opacity 0.3s; width: 100%; max-width: 300px; }
     .btn-wa-solid { background: #25D366; }
     .btn-call-solid { background: var(--primary-color); }
     .btn:hover { opacity: 0.9; }
 
     /* Image Grids */
-    .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
     .img-card { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); height: 250px; }
     .img-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
     .img-card:hover img { transform: scale(1.05); }
@@ -79,17 +81,37 @@
     /* Footer */
     footer { background: var(--primary-color); color: var(--white); padding: 3rem 5%; text-align: center; }
     .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
-    .footer-content div, .footer-content a { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; color: var(--white); text-decoration: none; }
+    .footer-content div, .footer-content a { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; color: var(--white); text-decoration: none; justify-content: center; }
 
     /* Floating WhatsApp Button */
-    .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: transform 0.3s; }
+    .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: transform 0.3s; }
     .float-wa:hover { transform: scale(1.1); }
 
+    /* Mobile Optimization Rules */
     @media(max-width: 768px) {
-      .nav-links { display: none; }
+      nav { padding: 1rem; }
+      .logo { font-size: 1.2rem; }
+      .nav-links { display: none; } /* Hide text links, keep CTA */
+      .nav-cta { padding: 0.5rem 1rem; font-size: 0.9rem; }
+      
+      .hero { padding: 4rem 1rem 3rem; height: auto; min-height: 60vh; }
       .hero h1 { font-size: 2.2rem; }
-      .hero p { font-size: 1.2rem; }
-      .btn-submit { margin-top: 0; width: 100%; }
+      .hero p { font-size: 1.1rem; }
+      .timings { font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem; }
+      
+      .booking-section { margin: -30px auto 2rem; padding: 1.5rem; width: 95%; }
+      .booking-form { flex-direction: column; align-items: stretch; gap: 1.2rem; }
+      .form-group { width: 100%; }
+      .btn-submit { margin-top: 0.5rem; padding: 1.2rem; }
+      
+      section { padding: 3rem 1.2rem; }
+      .section-title { font-size: 1.8rem; }
+      .section-subtitle { font-size: 1rem; }
+      
+      .img-grid { grid-template-columns: 1fr; }
+      .img-card { height: 220px; }
+      
+      .footer-content { flex-direction: column; gap: 1rem; }
     }
   </style>
 </head>
@@ -98,12 +120,14 @@
   <!-- Navigation -->
   <nav>
     <a href="#" class="logo">COWBOY DORMS</a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#dormitory">Dormitory</a>
-      <a href="#restrooms">Facilities</a>
-      <a href="#activities">Activities</a>
-      <a href="tel:+919446842216" class="nav-cta">Call Now</a>
+    <div class="nav-menu">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#dormitory">Dormitory</a>
+        <a href="#restrooms">Facilities</a>
+        <a href="#activities">Activities</a>
+      </div>
+      <a href="tel:+919446842216" class="nav-cta"><i class="fas fa-phone-alt"></i> Call Now</a>
     </div>
   </nav>
 
@@ -111,7 +135,10 @@
   <header class="hero">
     <h1>Premium Bunk Beds</h1>
     <p>Located near Cochin International Airport</p>
-    <div class="timings"><i class="fas fa-clock"></i> Check-In: 2:00 PM &nbsp;|&nbsp; Check-Out: 11:00 AM</div>
+    <div class="timings">
+      <span><i class="fas fa-sign-in-alt"></i> Check-In: 2:00 PM</span> 
+      <span><i class="fas fa-sign-out-alt"></i> Check-Out: 11:00 AM</span>
+    </div>
     <div class="hero-icons">
       <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="icon-wa" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
       <a href="tel:+919446842216" class="icon-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
@@ -130,11 +157,11 @@
         <input type="number" id="bedCount" min="1" max="24" value="1" required>
       </div>
       <div class="form-group">
-        <label for="checkIn">Check-In</label>
+        <label for="checkIn">Check-In Date</label>
         <input type="date" id="checkIn" required>
       </div>
       <div class="form-group">
-        <label for="checkOut">Check-Out</label>
+        <label for="checkOut">Check-Out Date</label>
         <input type="date" id="checkOut" required>
       </div>
       <button type="submit" class="btn-submit">Check Availability</button>
@@ -159,12 +186,12 @@
     <h2 class="section-title">Premium AC Dormitory</h2>
     <p class="section-subtitle">Comfortable, secure, and fully air-conditioned bunk beds designed for a restful stay.</p>
     <div class="img-grid">
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/green_dormitory_bed.jpeg" alt="Green Dormitory Bed Space"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/red_dormitory_bed.jpeg" alt="Red Dormitory Bed Space"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/grey_dormitory_bed.jpeg" alt="Grey Dormitory Bed Space"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/coffee_dormitory_bed.jpeg" alt="Coffee Dormitory Bed Space"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/left_side_dorms.jpeg" alt="Dormitory Left View"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/right_side_dorms.jpeg" alt="Dormitory Right View"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/green_dormitory_bed.jpeg" alt="Green Dormitory Bed Space" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/red_dormitory_bed.jpeg" alt="Red Dormitory Bed Space" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/grey_dormitory_bed.jpeg" alt="Grey Dormitory Bed Space" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/coffee_dormitory_bed.jpeg" alt="Coffee Dormitory Bed Space" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/left_side_dorms.jpeg" alt="Dormitory Left View" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/right_side_dorms.jpeg" alt="Dormitory Right View" loading="lazy"></div>
     </div>
   </section>
 
@@ -173,9 +200,9 @@
     <h2 class="section-title">Pristine Restroom Facilities</h2>
     <p class="section-subtitle">We prioritize hygiene. Enjoy exceptionally clean, modern shared bathrooms with a highly favorable guest-to-bathroom ratio.</p>
     <div class="img-grid">
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Restroom.jpeg" alt="Modern Washroom"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Toilet.jpeg" alt="Clean Toilet"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/restroom_path.jpeg" alt="Restroom Pathway"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Restroom.jpeg" alt="Modern Washroom" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Toilet.jpeg" alt="Clean Toilet" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/restroom_path.jpeg" alt="Restroom Pathway" loading="lazy"></div>
     </div>
   </section>
 
@@ -184,13 +211,12 @@
     <h2 class="section-title">Hostel Vibe & Activities</h2>
     <p class="section-subtitle">Unwind on the open rooftop, prepare a meal in our <strong>open kitchen facility</strong>, connect with fellow travelers over indoor games, or rent a cycle to explore the neighborhood.</p>
     <div class="img-grid">
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_kitchen.jpeg" alt="Open Kitchen Facility"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg" alt="Rooftop Lounge Area"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Carrom%20board.jpeg" alt="Indoor Carrom Board"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Chess%20Game.jpeg" alt="Chess Game"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Soft-Tip%20Darts.jpeg" alt="Soft-Tip Darts Board"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Playing%20Badminton.jpeg" alt="Outdoor Badminton"></div>
-      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Bycycle.jpeg" alt="Bicycle Rentals"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_kitchen.jpeg" alt="Open Kitchen Facility" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg" alt="Rooftop Lounge Area" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Carrom%20board.jpeg" alt="Indoor Carrom Board" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Chess%20Game.jpeg" alt="Chess Game" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Soft-Tip%20Darts.jpeg" alt="Soft-Tip Darts Board" loading="lazy"></div>
+      <div class="img-card"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Bycycle.jpeg" alt="Bicycle Rentals" loading="lazy"></div>
     </div>
   </section>
 
