@@ -87,6 +87,33 @@
     /* Colored Sections */
     .bg-gray { background-color: #e2e8f0; }
 
+    /* Google Maps Locator Styles */
+    .map-container {
+      width: 100%;
+      height: 600px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    gmpx-store-locator {
+      width: 100%;
+      height: 100%;
+      --gmpx-color-surface: #fff;
+      --gmpx-color-on-surface: #333333;
+      --gmpx-color-on-surface-variant: #64748b;
+      --gmpx-color-primary: #3b82f6; /* Matched to var(--accent-color) */
+      --gmpx-color-outline: #cbd5e1;
+      --gmpx-fixed-panel-width-row-layout: 28.5em;
+      --gmpx-fixed-panel-height-column-layout: 65%;
+      --gmpx-font-family-base: "Poppins", sans-serif;
+      --gmpx-font-family-headings: "Poppins", sans-serif;
+      --gmpx-font-size-base: 0.875rem;
+      --gmpx-hours-color-open: #188038;
+      --gmpx-hours-color-closed: #d50000;
+      --gmpx-rating-color: #ffb300;
+      --gmpx-rating-color-empty: #e0e0e0;
+    }
+
     /* Footer */
     footer { background: var(--primary-color); color: var(--white); padding: 3rem 5%; text-align: center; }
     .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
@@ -118,10 +145,30 @@
       
       .img-grid { grid-template-columns: 1fr; }
       .img-card { height: 220px; }
+      .map-container { height: 500px; }
       
       .footer-content { flex-direction: column; gap: 1rem; }
     }
   </style>
+
+  <!-- Google Maps Locator Plus Configuration Script -->
+  <script>
+    const CONFIGURATION = {
+      "locations": [
+        {"title":"Cowboy Dorms","address1":"611/D, Illathu Road, Neduvannoor","address2":"Aluva, Kerala, India","coords":{"lat":10.138033,"lng":76.3768904},"placeId":"ChIJgWo5uxYJCDsRJ1I77Jbptl8"}
+      ],
+      "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+      "mapsApiKey": "YOUR_API_KEY_HERE",
+      "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+    };
+  </script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', async () => {
+      await customElements.whenDefined('gmpx-store-locator');
+      const locator = document.querySelector('gmpx-store-locator');
+      locator.configureFromQuickBuilder(CONFIGURATION);
+    });
+  </script>
 </head>
 <body>
 
@@ -133,9 +180,9 @@
         <a href="#about">About</a>
         <a href="#dormitory">Dormitory</a>
         <a href="#restrooms">Facilities</a>
-        <a href="#activities">Activities</a>
+        <a href="#location">Location</a>
       </div>
-      <a href="tel:+919072315288" class="nav-cta"><i class="fas fa-phone-alt"></i> Call Now</a>
+      <a href="tel:+919446842216" class="nav-cta"><i class="fas fa-phone-alt"></i> Call Now</a>
     </div>
   </nav>
 
@@ -148,8 +195,8 @@
       <span><i class="fas fa-sign-out-alt"></i> Check-Out: 11:00 AM</span>
     </div>
     <div class="hero-icons">
-      <a href="https://wa.me/919072315288?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="icon-wa" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
-      <a href="tel:+919072315288" class="icon-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+      <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="icon-wa" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+919446842216" class="icon-call" title="Call Us"><i class="fas fa-phone-alt"></i></a>
     </div>
   </header>
 
@@ -184,8 +231,8 @@
       <p>Enjoy exceptionally neat, hygienic, fully air-conditioned dormitories equipped with high-speed Wi-Fi, ample vehicle parking, an open kitchen, and a peaceful rooftop. Our pleasant, professional, and multilingual staff are always on hand to ensure a welcoming and comfortable stay.</p>
       
       <div class="btn-group">
-        <a href="https://wa.me/919072315288?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="btn btn-wa-solid"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
-        <a href="tel:+919072315288" class="btn btn-call-solid"><i class="fas fa-phone-alt"></i> Call Directly</a>
+        <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="btn btn-wa-solid"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+        <a href="tel:+919446842216" class="btn btn-call-solid"><i class="fas fa-phone-alt"></i> Call Directly</a>
       </div>
     </div>
   </section>
@@ -261,18 +308,29 @@
     </div>
   </section>
 
+  <!-- Location Map Section -->
+  <section id="location" class="bg-gray">
+    <h2 class="section-title">Our Location</h2>
+    <p class="section-subtitle">611/D, Illathu Road, Neduvannoor, Aluva, Kerala, India</p>
+    <div class="map-container">
+      <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.15/index.min.js"></script>
+      <gmpx-api-loader key="YOUR_API_KEY_HERE" solution-channel="GMP_QB_locatorplus_v11_c"></gmpx-api-loader>
+      <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <a href="tel:+919072315288"><i class="fas fa-phone-alt"></i> +91 9072315288</a>
+      <a href="tel:+919446842216"><i class="fas fa-phone-alt"></i> +91 9446842216</a>
       <a href="mailto:cowboydorms@gmail.com"><i class="fas fa-envelope"></i> cowboydorms@gmail.com</a>
-      <div><i class="fas fa-map-marker-alt"></i> Neduvannoor, Aluva, Kerala</div>
+      <div><i class="fas fa-map-marker-alt"></i> 611/D, Illathu Road, Neduvannoor, Aluva, Kerala, India</div>
     </div>
     <p>&copy; 2026 Cowboy Dorms. All Rights Reserved.</p>
   </footer>
 
   <!-- Floating WhatsApp Widget -->
-  <a href="https://wa.me/919072315288?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="float-wa" target="_blank" title="Chat with us on WhatsApp">
+  <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="float-wa" target="_blank" title="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -288,7 +346,7 @@
       
       const message = `Hi Cowboy Dorms, I would like to check bed availability.%0A%0A*Name:* ${name}%0A*Beds Needed:* ${bedCount}%0A*Check-In:* ${checkIn}%0A*Check-Out:* ${checkOut}`;
       
-      const whatsappUrl = `https://wa.me/919072315288?text=${message}`;
+      const whatsappUrl = `https://wa.me/919446842216?text=${message}`;
       window.open(whatsappUrl, '_blank');
     }
   </script>
