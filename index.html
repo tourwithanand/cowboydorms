@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory in Neduvannoor. Calm, peaceful residential stay with premium bunk beds, open kitchen, and 24x7 airport transit.">
+  <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, peaceful transit stay Kerala, backpacker dorms Ernakulam, Neduvannoor stay, premium bunk beds">
   <title>Cowboy Dorms | Peaceful Transit Dormitory Near Cochin Airport</title>
   
+  <!-- Favicon References -->
+  <link rel="icon" type="image/svg+xml" href="cowboy-dorms-monogram-favicon.svg">
+  <link rel="apple-touch-icon" href="cowboy-dorms-monogram-favicon-512.png">
+
   <!-- Google Fonts: Rye (Cowboy Style) & Poppins (High Readability) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rye&display=swap" rel="stylesheet">
   
@@ -19,12 +24,12 @@
     /* Cowboy Theme Color Palette & Variables */
     :root {
       --primary-color: #3E2723;   /* Deep Leather Brown */
-      --accent-color: #D84315;    /* Rust / Burnt Orange */
+      --accent-color: #D84315;    /* Rust / Saddle Burnt Orange */
       --text-main: #2F241F;       /* Dark Bark */
-      --bg-light: #F4EBE1;        /* Warm Parchment / Sand */
-      --bg-alt: #E8DCC8;          /* Darker Sand */
+      --bg-light: #F4EBE1;        /* Warm Sand / Parchment */
+      --bg-alt: #E8DCC8;          /* Warm Earth Tint */
       --white: #ffffff;
-      --footer-bg: #1F140F;       /* Almost Black Brown */
+      --footer-bg: #1F140F;       /* Deep Saddle Black-Brown */
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -36,7 +41,7 @@
       line-height: 1.6; 
     }
 
-    /* Typography */
+    /* Cowboy Typography */
     h1, h2, h3, .cowboy-font { 
       font-family: 'Rye', serif; 
       font-weight: normal;
@@ -46,61 +51,62 @@
     /* Sticky Navigation */
     nav { 
       background: var(--white); 
-      padding: 1rem 5%; 
+      padding: 0.8rem 5%; 
       display: flex; 
       justify-content: space-between; 
       align-items: center; 
       position: sticky; 
       top: 0; 
       z-index: 1000; 
-      box-shadow: 0 2px 10px rgba(62, 39, 35, 0.15); 
+      box-shadow: 0 2px 10px rgba(62, 39, 35, 0.12); 
       border-bottom: 2px solid var(--accent-color);
     }
     
-    /* Logo Image Styling */
-    .logo { 
-      display: flex; 
-      align-items: center; 
-      text-decoration: none; 
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
     }
-    .logo img {
-      height: 45px; /* Neatly fits the navbar */
+    .nav-logo-img {
+      height: 48px;
       width: auto;
+      max-width: 220px;
       object-fit: contain;
+      display: block;
     }
 
     .nav-menu { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 600; transition: color 0.3s; margin-right: 1rem; }
+    .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 600; transition: color 0.3s; margin-right: 1.2rem; }
     .nav-links a:hover { color: var(--accent-color); }
-    .nav-cta { background: var(--accent-color); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;}
+    .nav-cta { background: var(--accent-color); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
 
     /* Hero Banner Section */
     .hero { 
       background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.8)), url('https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg') center/cover; 
       height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; 
     }
-    .hero h1 { font-size: 4rem; margin-bottom: 0.5rem; color: #F4EBE1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-    .hero p { font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 300; }
-    .timings { font-size: 1.1rem; font-weight: 600; background: rgba(255, 255, 255, 0.15); padding: 0.5rem 1rem; border-radius: 4px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.3); }
+    .hero h1 { font-size: 3.8rem; margin-bottom: 0.5rem; color: #F4EBE1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+    .hero p { font-size: 1.4rem; margin-bottom: 1.5rem; font-weight: 300; }
+    .timings { font-size: 1rem; font-weight: 600; background: rgba(255, 255, 255, 0.15); padding: 0.5rem 1.2rem; border-radius: 4px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.3); }
     .hero-icons { display: flex; gap: 1.5rem; }
-    .hero-icons a { display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; border-radius: 50%; font-size: 2rem; color: var(--white); text-decoration: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+    .hero-icons a { display: flex; justify-content: center; align-items: center; width: 56px; height: 56px; border-radius: 50%; font-size: 1.8rem; color: var(--white); text-decoration: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
     .hero-icons .icon-wa { background-color: #25D366; }
     .hero-icons .icon-call { background-color: var(--accent-color); }
     .hero-icons a:hover { transform: scale(1.1); }
 
     /* Availability Form Section */
-    .booking-section { background: var(--white); padding: 2rem 5%; box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1); margin: -50px auto 3rem; max-width: 1000px; border-radius: 8px; position: relative; z-index: 10; width: 90%; border-top: 4px solid var(--accent-color); }
+    .booking-section { background: var(--white); padding: 2rem 5%; box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1); margin: -50px auto 3rem; max-width: 1050px; border-radius: 8px; position: relative; z-index: 10; width: 92%; border-top: 4px solid var(--accent-color); }
     .booking-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; }
     .form-group { flex: 1; min-width: 140px; display: flex; flex-direction: column; }
-    .form-group label { font-size: 0.9rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.4rem; text-transform: uppercase; }
-    .form-group input { padding: 1rem; border: 1px solid #d7ccc8; border-radius: 4px; font-size: 1rem; width: 100%; outline: none; transition: border-color 0.3s; background: var(--bg-light); }
+    .form-group label { font-size: 0.85rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-group input { padding: 0.9rem; border: 1px solid #d7ccc8; border-radius: 4px; font-size: 0.95rem; width: 100%; outline: none; transition: border-color 0.3s; background: var(--bg-light); }
     .form-group input:focus { border-color: var(--accent-color); }
-    .btn-submit { background: var(--accent-color); color: var(--white); border: none; padding: 1rem 2rem; border-radius: 4px; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; white-space: nowrap; height: 100%; text-transform: uppercase; letter-spacing: 1px;}
+    .btn-submit { background: var(--accent-color); color: var(--white); border: none; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.3s; white-space: nowrap; height: 100%; text-transform: uppercase; letter-spacing: 1px; }
     .btn-submit:hover { background: #bf360c; }
 
     /* General Layout */
-    section { padding: 4rem 5%; }
-    .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color); }
+    section { padding: 4.5rem 5%; }
+    .section-title { text-align: center; font-size: 2.4rem; margin-bottom: 0.8rem; color: var(--primary-color); }
     .section-subtitle { text-align: center; font-size: 1.1rem; color: #5d4037; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
 
     /* Text & Content Blocks */
@@ -109,96 +115,118 @@
     
     .features-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: left; margin: 3rem 0; }
     .feature-block { background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(62,39,35,0.05); border-left: 4px solid var(--accent-color); }
-    .feature-block h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
-    .feature-block h3 i { color: var(--accent-color); font-size: 1.5rem; }
+    .feature-block h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
+    .feature-block h3 i { color: var(--accent-color); font-size: 1.4rem; }
     .feature-block ul { list-style: none; }
     .feature-block ul li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px; }
     .feature-block ul li i { color: var(--accent-color); margin-top: 5px; font-size: 0.9rem; }
 
     .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .btn { padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 700; color: var(--white); transition: opacity 0.3s; width: 100%; max-width: 300px; text-align: center; text-transform: uppercase; letter-spacing: 1px;}
+    .btn { padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 700; color: var(--white); transition: opacity 0.3s; width: 100%; max-width: 300px; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
     .btn-wa-solid { background: #25D366; }
     .btn-call-solid { background: var(--primary-color); }
     .btn:hover { opacity: 0.9; }
 
-    /* Swiper Slider */
+    /* Sliders (Swiper) */
     .slider-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; position: relative; }
     .swiper-slide {
       border-radius: 8px;
       overflow: hidden;
       aspect-ratio: 4/3; 
-      box-shadow: 0 4px 15px rgba(62,39,35,0.15);
+      box-shadow: 0 4px 15px rgba(62,39,35,0.12);
       background-color: var(--primary-color);
     }
     .swiper-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
     }
-    .swiper-slide:hover img { transform: scale(1.05); }
-    .swiper-button-next, .swiper-button-prev { color: var(--white) !important; text-shadow: 0 2px 4px rgba(0,0,0,0.5); background: rgba(62,39,35,0.5); padding: 2rem 1.5rem; border-radius: 4px; }
+    .swiper-slide:hover img { transform: scale(1.04); }
+    .swiper-button-next, .swiper-button-prev { color: var(--white) !important; background: rgba(62,39,35,0.65); padding: 1.8rem 1.3rem; border-radius: 4px; }
     .swiper-pagination-bullet-active { background: var(--accent-color) !important; }
 
     /* Colored Sections */
     .bg-alt { background-color: var(--bg-alt); border-top: 1px solid #d7ccc8; border-bottom: 1px solid #d7ccc8; }
 
-    /* Google Maps Component Styling */
-    .map-container {
-      width: 100%;
-      height: 600px;
+    /* Location Section Layout */
+    .map-wrapper-card {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--white);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(62, 39, 35, 0.15);
-      border: 2px solid #d7ccc8;
+      box-shadow: 0 6px 25px rgba(62, 39, 35, 0.12);
+      border: 1px solid #d7ccc8;
     }
-    gmpx-store-locator {
+    .map-header-info {
+      padding: 1.5rem 2rem;
+      background: var(--primary-color);
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .map-header-info h4 { font-family: 'Rye', serif; font-size: 1.4rem; color: #F4EBE1; margin-bottom: 0.3rem; }
+    .map-header-info p { font-size: 0.95rem; color: #d7ccc8; }
+    .map-directions-btn {
+      background: var(--accent-color);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s;
+    }
+    .map-directions-btn:hover { background: #bf360c; }
+    .map-frame-container {
+      width: 100%;
+      height: 480px;
+      background: #eee;
+    }
+    .map-frame-container iframe {
       width: 100%;
       height: 100%;
-      --gmpx-color-surface: var(--white);
-      --gmpx-color-on-surface: var(--primary-color);
-      --gmpx-color-on-surface-variant: #5d4037;
-      --gmpx-color-primary: var(--accent-color);
-      --gmpx-color-outline: #d7ccc8;
-      --gmpx-fixed-panel-width-row-layout: 28.5em;
-      --gmpx-fixed-panel-height-column-layout: 65%;
-      --gmpx-font-family-base: "Poppins", sans-serif;
-      --gmpx-font-family-headings: "Rye", serif;
-      --gmpx-font-size-base: 0.9rem;
-      --gmpx-hours-color-open: #2e7d32;
-      --gmpx-hours-color-closed: #c62828;
+      border: none;
+      display: block;
     }
 
-    /* Beautiful Premium Footer */
+    /* Premium Footer */
     .premium-footer {
       background: var(--footer-bg);
       color: #d7ccc8;
-      padding: 4rem 5% 2rem;
+      padding: 4.5rem 5% 2rem;
       border-top: 5px solid var(--accent-color);
     }
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
+      grid-template-columns: 1.4fr 0.8fr 1.2fr;
+      gap: 3.5rem;
       max-width: 1200px;
       margin: 0 auto;
       margin-bottom: 3rem;
     }
     
-    /* Footer Logo Styling */
     .footer-logo-img {
-      height: 60px;
+      height: 52px;
       width: auto;
+      max-width: 250px;
       margin-bottom: 1.5rem;
-      background-color: var(--white); /* Ensures the dark blue text of the logo is highly readable against the dark footer */
-      padding: 8px 15px;
-      border-radius: 6px;
       display: block;
+      object-fit: contain;
     }
 
     .footer-col h3 {
       color: var(--white);
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-bottom: 1.5rem;
       position: relative;
       padding-bottom: 0.5rem;
@@ -208,91 +236,85 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 50px;
+      width: 45px;
       height: 3px;
       background: var(--accent-color);
     }
-    .footer-col p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.8; }
+    .footer-col p { font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.7; color: #bcaaa4; }
     .footer-contact a, .footer-contact span {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
       color: #d7ccc8;
       text-decoration: none;
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+      font-size: 1rem;
       transition: color 0.3s;
     }
     .footer-contact a:hover { color: var(--accent-color); }
-    .footer-contact i { color: var(--accent-color); font-size: 1.2rem; width: 20px; text-align: center; }
+    .footer-contact i { color: var(--accent-color); font-size: 1.1rem; margin-top: 4px; width: 20px; }
+    
     .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
     .social-links a {
       display: flex; justify-content: center; align-items: center;
-      width: 45px; height: 45px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      width: 42px; height: 42px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 4px;
       color: var(--white);
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: all 0.3s;
     }
     .social-links a:hover { background: var(--accent-color); border-color: var(--accent-color); transform: translateY(-3px); }
+    
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.88rem;
       color: #8d6e63;
     }
 
     /* Floating WhatsApp Button */
-    .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: transform 0.3s; }
+    .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: transform 0.3s; }
     .float-wa:hover { transform: scale(1.1); }
 
     /* Mobile Optimization Rules */
+    @media(max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
     @media(max-width: 768px) {
-      nav { padding: 1rem; }
-      .logo img { height: 35px; } /* Slightly smaller logo for mobile headers */
+      nav { padding: 0.8rem 1rem; }
+      .nav-logo-img { height: 38px; }
       .nav-links { display: none; }
-      .nav-cta { padding: 0.5rem 1rem; font-size: 0.9rem; }
+      .nav-cta { padding: 0.5rem 0.9rem; font-size: 0.85rem; }
       
       .hero { padding: 4rem 1rem 3rem; height: auto; min-height: 60vh; }
-      .hero h1 { font-size: 2.8rem; }
+      .hero h1 { font-size: 2.6rem; }
       .hero p { font-size: 1.1rem; }
-      .timings { font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem; }
+      .timings { font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; }
       
-      .booking-section { margin: -30px auto 2rem; padding: 1.5rem; width: 95%; }
-      .booking-form { flex-direction: column; align-items: stretch; gap: 1.2rem; }
+      .booking-section { margin: -30px auto 2rem; padding: 1.3rem; width: 95%; }
+      .booking-form { flex-direction: column; align-items: stretch; gap: 1rem; }
       .form-group { width: 100%; }
-      .btn-submit { margin-top: 0.5rem; padding: 1.2rem; }
+      .btn-submit { margin-top: 0.5rem; padding: 1rem; }
       
       section { padding: 3rem 1.2rem; }
       .section-title { font-size: 2rem; }
       
-      .map-container { height: 450px; }
-      .swiper-button-next, .swiper-button-prev { display: none; } /* Hide heavy arrows on mobile */
+      .map-frame-container { height: 380px; }
+      .swiper-button-next, .swiper-button-prev { display: none; }
     }
   </style>
-
-  <!-- Google Maps Locator Plus Configuration Script -->
-  <script>
-    const CONFIGURATION = {
-      "locations": [
-        {"title":"Cowboy Dorms","address1":"611/D, Illathu Road, Neduvannoor","address2":"Aluva, Kerala, India","coords":{"lat":10.138033,"lng":76.3768904},"placeId":"ChIJgWo5uxYJCDsRJ1I77Jbptl8"}
-      ],
-      "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
-      "mapsApiKey": "YOUR_API_KEY_HERE",
-      "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
-    };
-  </script>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <a href="#" class="logo">
-      <img src="COWBOY DORMS LOGO.png" alt="Cowboy Dorms Logo">
+    <a href="#" class="nav-brand">
+      <img src="cowboy-dorms-monogram-logo.svg" alt="Cowboy Dorms" class="nav-logo-img">
     </a>
     <div class="nav-menu">
       <div class="nav-links">
@@ -450,22 +472,30 @@
     </div>
   </section>
 
-  <!-- Location Map Section -->
+  <!-- Location Map Section (Completely Fixed & Error-Free) -->
   <section id="location" class="bg-alt">
     <h2 class="section-title">Saddle Up & Find Us</h2>
-    <p class="section-subtitle">611/D, Illathu Road, Neduvannoor, Aluva, Kerala, India</p>
+    <p class="section-subtitle">611/D, Illathu Road, Neduvannoor, Aluva, Kerala, India - 683574</p>
     
-    <div class="map-container">
-      <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.15/index.min.js"></script>
-      <script type="module">
-        document.addEventListener('DOMContentLoaded', async () => {
-          await customElements.whenDefined('gmpx-store-locator');
-          const locator = document.querySelector('gmpx-store-locator');
-          locator.configureFromQuickBuilder(CONFIGURATION);
-        });
-      </script>
-      <gmpx-api-loader key="YOUR_API_KEY_HERE" solution-channel="GMP_QB_locatorplus_v11_c"></gmpx-api-loader>
-      <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+    <div class="map-wrapper-card">
+      <div class="map-header-info">
+        <div>
+          <h4>Cowboy Dorms</h4>
+          <p><i class="fas fa-map-pin"></i> 611/D, Illathu Road, Neduvannoor, Aluva (4km from Cochin Airport)</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=10.138033,76.3768904" target="_blank" rel="noopener noreferrer" class="map-directions-btn">
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+      </div>
+      <div class="map-frame-container">
+        <!-- Direct iframe embed with exact coordinates: 10.138033, 76.3768904 -->
+        <iframe 
+          src="https://maps.google.com/maps?q=10.138033,76.3768904&hl=en&z=16&output=embed" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
   </section>
 
@@ -475,7 +505,8 @@
       <!-- Brand Column -->
       <div class="footer-col">
         <a href="#" style="text-decoration: none;">
-          <img src="COWBOY DORMS LOGO.png" alt="Cowboy Dorms Logo" class="footer-logo-img">
+          <!-- High contrast reverse monogram logo for the dark footer -->
+          <img src="cowboy-dorms-monogram-logo-reverse.svg" alt="Cowboy Dorms Logo" class="footer-logo-img">
         </a>
         <p>Your peaceful transit basecamp near Cochin International Airport. Premium bunk beds, quiet surroundings, and authentic hospitality wrapped in a rustic western vibe.</p>
         <div class="social-links">
@@ -499,7 +530,7 @@
       <!-- Contact Details -->
       <div class="footer-col">
         <h3>Contact Us</h3>
-        <div class="footer-contact">
+        <div class="footer-contact" style="flex-direction: column;">
           <a href="tel:+919446842216"><i class="fas fa-phone-alt"></i> +91 9446842216</a>
           <a href="mailto:cowboydorms@gmail.com"><i class="fas fa-envelope"></i> cowboydorms@gmail.com</a>
           <span><i class="fas fa-map-marker-alt"></i> 611/D, Illathu Road, <br>Neduvannoor, Aluva, <br>Kerala, India - 683574</span>
@@ -517,10 +548,9 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Swiper JS & Init Script -->
+  <!-- Swiper JS & Carousel Initialization -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    // Initialize Swiper Carousels
     var swipers = document.querySelectorAll('.mySwiper');
     swipers.forEach(function(swiperContainer) {
       new Swiper(swiperContainer, {
@@ -547,7 +577,7 @@
       });
     });
 
-    // WhatsApp Form Script
+    // WhatsApp Form Submission Script
     function submitToWhatsApp(event) {
       event.preventDefault(); 
       
