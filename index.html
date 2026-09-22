@@ -384,7 +384,7 @@
     </div>
   </section>
 
-  <!-- Location Map Section (Integrated tightly with GMB Profile) -->
+  <!-- Location Map Section (Fixed to search for Business Profile) -->
   <section id="location" class="bg-alt">
     <h2 class="section-title">Saddle Up & Find Us</h2>
     <p class="section-subtitle">611/D, Illathu Road, Neduvannoor, Aluva, Kerala, India - 683574</p>
@@ -396,20 +396,20 @@
           <p><i class="fas fa-map-pin"></i> Highly rated on Google. Just 10-15 minutes from COK Airport Terminals.</p>
         </div>
         <div class="gmb-actions">
-          <!-- Button links directly to Google Maps navigation using your Place ID -->
-          <a href="https://www.google.com/maps/dir/?api=1&destination=Cowboy+Dorms,+Illathu+Road,+Neduvannoor,+Kerala&destination_place_id=ChIJgWo5uxYJCDsRJ1I77Jbptl8" target="_blank" rel="noopener noreferrer" class="btn-directions">
+          <!-- Button links directly to Google Maps navigation searching the business directly -->
+          <a href="https://www.google.com/maps/dir//Cowboy+Dorms,+Illathu+Road,+Neduvannoor,+Kerala" target="_blank" rel="noopener noreferrer" class="btn-directions">
             <i class="fas fa-directions"></i> Get Directions
           </a>
-          <!-- Button links directly to GMB Listing to view or leave reviews -->
-          <a href="https://www.google.com/maps/place/?q=place_id:ChIJgWo5uxYJCDsRJ1I77Jbptl8" target="_blank" rel="noopener noreferrer" class="btn-review">
+          <!-- Button links exactly to the GMB share link provided -->
+          <a href="https://share.google/g80ubDDZE3umfeO8u" target="_blank" rel="noopener noreferrer" class="btn-review">
             <i class="fab fa-google"></i> View Profile
           </a>
         </div>
       </div>
       <div class="map-frame-container">
-        <!-- Direct iframe embed with exact coordinates -->
+        <!-- Direct iframe embed using a text query so it loads the business place card -->
         <iframe 
-          src="https://maps.google.com/maps?q=10.138033,76.3768904&hl=en&z=16&output=embed" 
+          src="https://maps.google.com/maps?q=Cowboy+Dorms,+Illathu+Road,+Neduvannoor,+Kerala&hl=en&z=16&output=embed" 
           allowfullscreen="" 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade">
