@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Dormitory in Neduvannoor. Calm, peaceful residential stay with premium bunk beds, open kitchen, and 24x7 airport transit.">
-  <meta name="keywords" content="AC dormitory Cochin airport, budget hostel Aluva, peaceful transit stay Kerala, backpacker dorms Ernakulam, Neduvannoor stay, premium bunk beds">
-  <title>Cowboy Dorms | Peaceful Transit Dormitory Near Cochin Airport</title>
+  
+  <!-- SEO & Keywords (Optimized for Foreigners & Transit Travelers) -->
+  <meta name="description" content="Cowboy Dorms: Premium AC Backpackers Hostel near Cochin International Airport (COK). Safe, budget-friendly transit stay for international travelers in Kerala with 24/7 airport drop.">
+  <meta name="keywords" content="backpackers hostel Cochin airport, international transit stay Kochi, budget dorms for foreigners Kerala, safe stay near COK, AC dormitory Ernakulam, Neduvannoor transit stay, cheap accommodation Kochi airport, digital nomad hostel Kerala">
+  <title>Cowboy Dorms | Backpackers & Transit Hostel Near Cochin Airport (COK)</title>
   
   <!-- Favicon References -->
   <link rel="icon" type="image/svg+xml" href="cowboy-dorms-monogram-favicon.svg">
@@ -20,71 +22,82 @@
   <!-- Swiper.js CSS for Slidable Photos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+  <!-- LocalBusiness Schema Markup (Google Search Rich Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hostel",
+    "name": "Cowboy Dorms",
+    "image": [
+      "https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg"
+    ],
+    "description": "Premium AC Backpackers Dormitory located just 4km from Cochin International Airport. Ideal for international travelers, backpackers, and transit stays.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "611/D, Illathu Road, Neduvannoor",
+      "addressLocality": "Aluva",
+      "addressRegion": "Kerala",
+      "postalCode": "683574",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 10.138033,
+      "longitude": 76.3768904
+    },
+    "telephone": "+919446842216",
+    "email": "cowboydorms@gmail.com",
+    "priceRange": "$",
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Air Conditioning",
+        "value": "True"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free Wi-Fi",
+        "value": "True"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Airport Shuttle",
+        "value": "True"
+      }
+    ]
+  }
+  </script>
+
   <style>
     /* Cowboy Theme Color Palette & Variables */
     :root {
-      --primary-color: #3E2723;   /* Deep Leather Brown */
-      --accent-color: #D84315;    /* Rust / Saddle Burnt Orange */
-      --text-main: #2F241F;       /* Dark Bark */
-      --bg-light: #F4EBE1;        /* Warm Sand / Parchment */
-      --bg-alt: #E8DCC8;          /* Warm Earth Tint */
+      --primary-color: #3E2723;   
+      --accent-color: #D84315;    
+      --text-main: #2F241F;       
+      --bg-light: #F4EBE1;        
+      --bg-alt: #E8DCC8;          
       --white: #ffffff;
-      --footer-bg: #1F140F;       /* Deep Saddle Black-Brown */
+      --footer-bg: #1F140F;       
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     
-    body { 
-      background-color: var(--bg-light); 
-      color: var(--text-main); 
-      font-family: 'Poppins', sans-serif; 
-      line-height: 1.6; 
-    }
+    body { background-color: var(--bg-light); color: var(--text-main); font-family: 'Poppins', sans-serif; line-height: 1.6; }
 
     /* Cowboy Typography */
-    h1, h2, h3, .cowboy-font { 
-      font-family: 'Rye', serif; 
-      font-weight: normal;
-      letter-spacing: 1px;
-    }
+    h1, h2, h3, .cowboy-font { font-family: 'Rye', serif; font-weight: normal; letter-spacing: 1px; }
 
     /* Sticky Navigation */
-    nav { 
-      background: var(--white); 
-      padding: 0.8rem 5%; 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      position: sticky; 
-      top: 0; 
-      z-index: 1000; 
-      box-shadow: 0 2px 10px rgba(62, 39, 35, 0.12); 
-      border-bottom: 2px solid var(--accent-color);
-    }
-    
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .nav-logo-img {
-      height: 48px;
-      width: auto;
-      max-width: 220px;
-      object-fit: contain;
-      display: block;
-    }
-
+    nav { background: var(--white); padding: 0.8rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(62, 39, 35, 0.12); border-bottom: 2px solid var(--accent-color); }
+    .nav-brand { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo-img { height: 48px; width: auto; max-width: 220px; object-fit: contain; display: block; }
     .nav-menu { display: flex; align-items: center; gap: 1.5rem; }
     .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 600; transition: color 0.3s; margin-right: 1.2rem; }
     .nav-links a:hover { color: var(--accent-color); }
     .nav-cta { background: var(--accent-color); color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
 
     /* Hero Banner Section */
-    .hero { 
-      background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.8)), url('https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg') center/cover; 
-      height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; 
-    }
+    .hero { background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.8)), url('https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_building.jpeg') center/cover; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding: 0 1rem; }
     .hero h1 { font-size: 3.8rem; margin-bottom: 0.5rem; color: #F4EBE1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
     .hero p { font-size: 1.4rem; margin-bottom: 1.5rem; font-weight: 300; }
     .timings { font-size: 1rem; font-weight: 600; background: rgba(255, 255, 255, 0.15); padding: 0.5rem 1.2rem; border-radius: 4px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.3); }
@@ -121,6 +134,15 @@
     .feature-block ul li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px; }
     .feature-block ul li i { color: var(--accent-color); margin-top: 5px; font-size: 0.9rem; }
 
+    /* Accordion FAQ Styling */
+    .faq-container { max-width: 850px; margin: 0 auto; }
+    details { background: var(--white); border-radius: 4px; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(62,39,35,0.05); border-left: 4px solid var(--accent-color); overflow: hidden; }
+    summary { font-weight: 600; font-size: 1.1rem; color: var(--primary-color); padding: 1.2rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '\f107'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--accent-color); transition: transform 0.3s; }
+    details[open] summary::after { transform: rotate(180deg); }
+    details p { padding: 0 1.2rem 1.2rem; color: #5d4037; border-top: 1px solid #f4ebe1; margin-top: 0.5rem; padding-top: 1rem; line-height: 1.7; }
+
     .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
     .btn { padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 700; color: var(--white); transition: opacity 0.3s; width: 100%; max-width: 300px; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
     .btn-wa-solid { background: #25D366; }
@@ -129,19 +151,8 @@
 
     /* Sliders (Swiper) */
     .slider-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; position: relative; }
-    .swiper-slide {
-      border-radius: 8px;
-      overflow: hidden;
-      aspect-ratio: 4/3; 
-      box-shadow: 0 4px 15px rgba(62,39,35,0.12);
-      background-color: var(--primary-color);
-    }
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
+    .swiper-slide { border-radius: 8px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 4px 15px rgba(62,39,35,0.12); background-color: var(--primary-color); }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
     .swiper-slide:hover img { transform: scale(1.04); }
     .swiper-button-next, .swiper-button-prev { color: var(--white) !important; background: rgba(62,39,35,0.65); padding: 1.8rem 1.3rem; border-radius: 4px; }
     .swiper-pagination-bullet-active { background: var(--accent-color) !important; }
@@ -149,161 +160,60 @@
     /* Colored Sections */
     .bg-alt { background-color: var(--bg-alt); border-top: 1px solid #d7ccc8; border-bottom: 1px solid #d7ccc8; }
 
-    /* Location Section Layout */
-    .map-wrapper-card {
-      max-width: 1200px;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 6px 25px rgba(62, 39, 35, 0.12);
-      border: 1px solid #d7ccc8;
-    }
-    .map-header-info {
-      padding: 1.5rem 2rem;
-      background: var(--primary-color);
-      color: var(--white);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .map-header-info h4 { font-family: 'Rye', serif; font-size: 1.4rem; color: #F4EBE1; margin-bottom: 0.3rem; }
-    .map-header-info p { font-size: 0.95rem; color: #d7ccc8; }
-    .map-directions-btn {
-      background: var(--accent-color);
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.7rem 1.4rem;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.3s;
-    }
-    .map-directions-btn:hover { background: #bf360c; }
-    .map-frame-container {
-      width: 100%;
-      height: 480px;
-      background: #eee;
-    }
-    .map-frame-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
+    /* Location Section Layout & GMB Integration */
+    .map-wrapper-card { max-width: 1200px; margin: 0 auto; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 6px 25px rgba(62, 39, 35, 0.12); border: 1px solid #d7ccc8; }
+    .map-header-info { padding: 2rem; background: var(--primary-color); color: var(--white); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .map-header-info h4 { font-family: 'Rye', serif; font-size: 1.6rem; color: #F4EBE1; margin-bottom: 0.5rem; }
+    .map-header-info p { font-size: 1rem; color: #d7ccc8; max-width: 500px; line-height: 1.5; }
+    
+    .gmb-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-directions { background: var(--accent-color); color: var(--white); text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 4px; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 8px; transition: background 0.3s; }
+    .btn-directions:hover { background: #bf360c; }
+    .btn-review { background: #F4EBE1; color: var(--primary-color); text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 4px; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 8px; transition: background 0.3s; border: 1px solid #d7ccc8;}
+    .btn-review:hover { background: #e8dcc8; }
+
+    .map-frame-container { width: 100%; height: 500px; background: #eee; }
+    .map-frame-container iframe { width: 100%; height: 100%; border: none; display: block; }
 
     /* Premium Footer */
-    .premium-footer {
-      background: var(--footer-bg);
-      color: #d7ccc8;
-      padding: 4.5rem 5% 2rem;
-      border-top: 5px solid var(--accent-color);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr 1.2fr;
-      gap: 3.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      margin-bottom: 3rem;
-    }
-    
-    .footer-logo-img {
-      height: 52px;
-      width: auto;
-      max-width: 250px;
-      margin-bottom: 1.5rem;
-      display: block;
-      object-fit: contain;
-    }
-
-    .footer-col h3 {
-      color: var(--white);
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-    .footer-col h3::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 45px;
-      height: 3px;
-      background: var(--accent-color);
-    }
+    .premium-footer { background: var(--footer-bg); color: #d7ccc8; padding: 4.5rem 5% 2rem; border-top: 5px solid var(--accent-color); }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 0.8fr 1.2fr; gap: 3.5rem; max-width: 1200px; margin: 0 auto; margin-bottom: 3rem; }
+    .footer-logo-img { height: 52px; width: auto; max-width: 250px; margin-bottom: 1.5rem; display: block; object-fit: contain; }
+    .footer-col h3 { color: var(--white); font-size: 1.6rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; }
+    .footer-col h3::after { content: ''; position: absolute; left: 0; bottom: 0; width: 45px; height: 3px; background: var(--accent-color); }
     .footer-col p { font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.7; color: #bcaaa4; }
-    .footer-contact a, .footer-contact span {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: #d7ccc8;
-      text-decoration: none;
-      margin-bottom: 1.1rem;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
+    .footer-contact a, .footer-contact span { display: flex; align-items: flex-start; gap: 12px; color: #d7ccc8; text-decoration: none; margin-bottom: 1.1rem; font-size: 1rem; transition: color 0.3s; }
     .footer-contact a:hover { color: var(--accent-color); }
     .footer-contact i { color: var(--accent-color); font-size: 1.1rem; margin-top: 4px; width: 20px; }
-    
     .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
-    .social-links a {
-      display: flex; justify-content: center; align-items: center;
-      width: 42px; height: 42px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 4px;
-      color: var(--white);
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: all 0.3s;
-    }
+    .social-links a { display: flex; justify-content: center; align-items: center; width: 42px; height: 42px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; color: var(--white); text-decoration: none; font-size: 1.1rem; transition: all 0.3s; }
     .social-links a:hover { background: var(--accent-color); border-color: var(--accent-color); transform: translateY(-3px); }
-    
-    .footer-bottom {
-      text-align: center;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      font-size: 0.88rem;
-      color: #8d6e63;
-    }
+    .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.88rem; color: #8d6e63; }
 
     /* Floating WhatsApp Button */
     .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: transform 0.3s; }
     .float-wa:hover { transform: scale(1.1); }
 
     /* Mobile Optimization Rules */
-    @media(max-width: 900px) {
-      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
-
+    @media(max-width: 900px) { .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
     @media(max-width: 768px) {
       nav { padding: 0.8rem 1rem; }
       .nav-logo-img { height: 38px; }
       .nav-links { display: none; }
       .nav-cta { padding: 0.5rem 0.9rem; font-size: 0.85rem; }
-      
       .hero { padding: 4rem 1rem 3rem; height: auto; min-height: 60vh; }
       .hero h1 { font-size: 2.6rem; }
       .hero p { font-size: 1.1rem; }
       .timings { font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; }
-      
       .booking-section { margin: -30px auto 2rem; padding: 1.3rem; width: 95%; }
       .booking-form { flex-direction: column; align-items: stretch; gap: 1rem; }
       .form-group { width: 100%; }
       .btn-submit { margin-top: 0.5rem; padding: 1rem; }
-      
       section { padding: 3rem 1.2rem; }
       .section-title { font-size: 2rem; }
-      
+      .map-header-info { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
+      .gmb-actions { width: 100%; flex-direction: column; }
+      .btn-directions, .btn-review { width: 100%; justify-content: center; }
       .map-frame-container { height: 380px; }
       .swiper-button-next, .swiper-button-prev { display: none; }
     }
@@ -319,8 +229,8 @@
     <div class="nav-menu">
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#dormitory">Dormitory</a>
-        <a href="#restrooms">Facilities</a>
+        <a href="#dormitory">Dorms</a>
+        <a href="#faq">FAQ</a>
         <a href="#location">Location</a>
       </div>
       <a href="tel:+919446842216" class="nav-cta"><i class="fas fa-phone-alt"></i> Call Now</a>
@@ -329,8 +239,8 @@
 
   <!-- Banner Hero Section -->
   <header class="hero">
-    <h1>Premium Bunk Beds</h1>
-    <p>Calm & Peaceful Stay Near Cochin Airport</p>
+    <h1>International Basecamp</h1>
+    <p>Safe & Peaceful Backpacker Transit Stay Near COK Airport</p>
     <div class="timings">
       <span><i class="fas fa-sign-in-alt"></i> Check-In: 2:00 PM</span> 
       <span><i class="fas fa-sign-out-alt"></i> Check-Out: 11:00 AM</span>
@@ -367,9 +277,9 @@
   <!-- About Section -->
   <section id="about">
     <div class="text-content">
-      <h2 class="section-title">A Peaceful Transit Basecamp</h2>
-      <p>Located just <strong>4km from Cochin International Airport (COK)</strong>, Cowboy Dorms is nestled in a calm, quiet, and nature-friendly residential area. We offer a soundless, peaceful environment perfect for resting, while remaining highly accessible.</p>
-      <p>Enjoy exceptionally neat, hygienic, fully air-conditioned dormitories equipped with high-speed Wi-Fi, ample vehicle parking, an open kitchen, and a peaceful rooftop. Our pleasant, professional, and multilingual staff are always on hand to ensure a welcoming and comfortable stay.</p>
+      <h2 class="section-title">Perfect for International Travelers</h2>
+      <p>Located just <strong>4km from Cochin International Airport (COK)</strong>, Cowboy Dorms is the ultimate safe, quiet, and nature-friendly residential basecamp for global backpackers and transit passengers navigating South India.</p>
+      <p>Enjoy exceptionally neat, highly secure, fully air-conditioned dormitories equipped with high-speed Wi-Fi, luggage storage, an open kitchen, and a peaceful rooftop. Our English-speaking, multilingual staff are dedicated to ensuring a hassle-free and culturally rich stay.</p>
       
       <div class="btn-group">
         <a href="https://wa.me/919446842216?text=Hi,%20I%20would%20like%20to%20reserve%20a%20bed%20at%20Cowboy%20Dorms" class="btn btn-wa-solid"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
@@ -380,26 +290,25 @@
 
   <!-- Local Guide & Services Section -->
   <section class="bg-alt">
-    <h2 class="section-title">Local Exploring & Services</h2>
-    <p class="section-subtitle">Everything you need for a convenient and culturally rich stay.</p>
+    <h2 class="section-title">Backpacker Essentials</h2>
+    <p class="section-subtitle">Everything a nomad needs for a convenient and highly secure stay.</p>
     
     <div class="features-list">
       <div class="feature-block">
-        <h3><i class="fas fa-map-marked-alt"></i> Explore Neduvannoor</h3>
+        <h3><i class="fas fa-map-marked-alt"></i> Explore Authentic Kerala</h3>
         <ul>
-          <li><i class="fas fa-check"></i> Local churches, mosques, and temples are at a walkable distance.</li>
-          <li><i class="fas fa-check"></i> Rent our bicycles for easy neighborhood transit.</li>
+          <li><i class="fas fa-check"></i> Walk to historical local churches, mosques, and temples.</li>
+          <li><i class="fas fa-check"></i> Rent our bicycles to explore quiet neighborhood backroads.</li>
           <li><i class="fas fa-check"></i> Visit beautiful nearby nutmeg plantations and lush paddy fields.</li>
         </ul>
       </div>
 
       <div class="feature-block">
-        <h3><i class="fas fa-concierge-bell"></i> Essential Services</h3>
+        <h3><i class="fas fa-concierge-bell"></i> Transit & Services</h3>
         <ul>
-          <li><i class="fas fa-check"></i> <strong>24x7 Airport Pickup & Drop-off</strong> available.</li>
-          <li><i class="fas fa-check"></i> Taxi services, package tours, and cabs with drivers available.</li>
-          <li><i class="fas fa-check"></i> External laundry services available nearby for extended stays.</li>
-          <li><i class="fas fa-check"></i> Swiggy and Zomato food delivery accessible directly to the property.</li>
+          <li><i class="fas fa-check"></i> <strong>24x7 Airport Pickup & Drop-off</strong> available upon request.</li>
+          <li><i class="fas fa-check"></i> Safe taxi services, package tours, and verified drivers available.</li>
+          <li><i class="fas fa-check"></i> Fast Wi-Fi, external laundry access, and food delivery direct to the hostel.</li>
         </ul>
       </div>
     </div>
@@ -408,7 +317,7 @@
   <!-- Bed Spaces Gallery (Slider) -->
   <section id="dormitory">
     <h2 class="section-title">Premium AC Dormitory</h2>
-    <p class="section-subtitle">Comfortable, secure, and fully air-conditioned bunk beds designed for a restful stay.</p>
+    <p class="section-subtitle">Comfortable, secure, and fully air-conditioned bunk beds designed to beat the Kerala heat.</p>
     
     <div class="slider-container">
       <div class="swiper mySwiper">
@@ -428,9 +337,9 @@
   </section>
 
   <!-- Restroom Facilities Highlight (Slider) -->
-  <section id="restrooms" class="bg-alt">
+  <section class="bg-alt">
     <h2 class="section-title">Pristine Facilities</h2>
-    <p class="section-subtitle">We prioritize hygiene. Enjoy exceptionally clean, modern shared bathrooms with a highly favorable guest-to-bathroom ratio.</p>
+    <p class="section-subtitle">Western-standard hygiene. Enjoy exceptionally clean, modern shared bathrooms with plenty of hot water.</p>
     
     <div class="slider-container">
       <div class="swiper mySwiper">
@@ -446,33 +355,36 @@
     </div>
   </section>
 
-  <!-- Activities & Vibe (Slider) -->
-  <section id="activities">
-    <h2 class="section-title">Hostel Vibe & Activities</h2>
-    <p class="section-subtitle">Unwind on the peaceful open rooftop, prepare a meal in our <strong>open kitchen</strong>, or connect with fellow travelers.</p>
+  <!-- FAQ Section (Newly Added for SEO & Visitors) -->
+  <section id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Everything you need to know before you arrive.</p>
     
-    <div class="text-content" style="margin-top: -1.5rem; margin-bottom: 2.5rem;">
-      <p style="font-size: 1rem; color: #5d4037;"><em><strong>Recreation:</strong> Chess, Carrom, Soft-Tip Darts, Outdoor Badminton, and a small workout space.</em></p>
-    </div>
-
-    <div class="slider-container">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/cowboy_dorms_kitchen.jpeg" alt="Open Kitchen Facility" loading="lazy"></div>
-          <div class="swiper-slide"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/rooftop_cowboy_dorms.jpeg" alt="Rooftop Lounge Area" loading="lazy"></div>
-          <div class="swiper-slide"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Carrom%20board.jpeg" alt="Indoor Carrom Board" loading="lazy"></div>
-          <div class="swiper-slide"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Chess%20Game.jpeg" alt="Chess Game" loading="lazy"></div>
-          <div class="swiper-slide"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Playing%20Badminton.jpeg" alt="Outdoor Badminton" loading="lazy"></div>
-          <div class="swiper-slide"><img src="https://raw.githubusercontent.com/tourwithanand/cowboydorms/main/Bycycle.jpeg" alt="Bicycle Rentals" loading="lazy"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
+    <div class="faq-container">
+      <details>
+        <summary>How far are you from Cochin International Airport (COK)?</summary>
+        <p>We are located just 4 kilometers from Cochin International Airport. It typically takes less than 15 minutes by taxi or auto-rickshaw to reach our property.</p>
+      </details>
+      <details>
+        <summary>Do you offer late-night or early-morning airport transfers?</summary>
+        <p>Yes, absolutely. We understand international flights arrive at all hours. We can arrange reliable, safe 24/7 airport pickups and drop-offs. Please contact us via WhatsApp in advance to book your ride.</p>
+      </details>
+      <details>
+        <summary>Is it safe for solo female backpackers & international travelers?</summary>
+        <p>Security is our top priority. Our dormitory is situated in a highly peaceful and safe residential neighborhood in Neduvannoor. The property features secure lockers for your belongings, well-lit surroundings, and attentive staff to ensure a worry-free stay.</p>
+      </details>
+      <details>
+        <summary>Do the dorms have Air Conditioning (AC) and Wi-Fi?</summary>
+        <p>Yes! All our dormitories are fully air-conditioned to keep you comfortable in the tropical Kerala weather, and we offer high-speed, free Wi-Fi throughout the property so you can stay connected or work remotely.</p>
+      </details>
+      <details>
+        <summary>Are there food options nearby?</summary>
+        <p>You can use our open kitchen to prepare your own meals. If you prefer to eat out, there are local eateries nearby, and delivery apps like Swiggy and Zomato deliver food straight to the hostel door.</p>
+      </details>
     </div>
   </section>
 
-  <!-- Location Map Section (Completely Fixed & Error-Free) -->
+  <!-- Location Map Section (Integrated tightly with GMB Profile) -->
   <section id="location" class="bg-alt">
     <h2 class="section-title">Saddle Up & Find Us</h2>
     <p class="section-subtitle">611/D, Illathu Road, Neduvannoor, Aluva, Kerala, India - 683574</p>
@@ -481,14 +393,21 @@
       <div class="map-header-info">
         <div>
           <h4>Cowboy Dorms</h4>
-          <p><i class="fas fa-map-pin"></i> 611/D, Illathu Road, Neduvannoor, Aluva (4km from Cochin Airport)</p>
+          <p><i class="fas fa-map-pin"></i> Highly rated on Google. Just 10-15 minutes from COK Airport Terminals.</p>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=10.138033,76.3768904" target="_blank" rel="noopener noreferrer" class="map-directions-btn">
-          <i class="fas fa-directions"></i> Get Directions
-        </a>
+        <div class="gmb-actions">
+          <!-- Button links directly to Google Maps navigation using your Place ID -->
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Cowboy+Dorms,+Illathu+Road,+Neduvannoor,+Kerala&destination_place_id=ChIJgWo5uxYJCDsRJ1I77Jbptl8" target="_blank" rel="noopener noreferrer" class="btn-directions">
+            <i class="fas fa-directions"></i> Get Directions
+          </a>
+          <!-- Button links directly to GMB Listing to view or leave reviews -->
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJgWo5uxYJCDsRJ1I77Jbptl8" target="_blank" rel="noopener noreferrer" class="btn-review">
+            <i class="fab fa-google"></i> View Profile
+          </a>
+        </div>
       </div>
       <div class="map-frame-container">
-        <!-- Direct iframe embed with exact coordinates: 10.138033, 76.3768904 -->
+        <!-- Direct iframe embed with exact coordinates -->
         <iframe 
           src="https://maps.google.com/maps?q=10.138033,76.3768904&hl=en&z=16&output=embed" 
           allowfullscreen="" 
@@ -502,32 +421,28 @@
   <!-- Beautiful Premium Footer -->
   <footer class="premium-footer">
     <div class="footer-grid">
-      <!-- Brand Column -->
       <div class="footer-col">
         <a href="#" style="text-decoration: none;">
-          <!-- High contrast reverse monogram logo for the dark footer -->
           <img src="cowboy-dorms-monogram-logo-reverse.svg" alt="Cowboy Dorms Logo" class="footer-logo-img">
         </a>
         <p>Your peaceful transit basecamp near Cochin International Airport. Premium bunk beds, quiet surroundings, and authentic hospitality wrapped in a rustic western vibe.</p>
         <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://share.google/g80ubDDZE3umfeO8u" aria-label="Google My Business"><i class="fab fa-google"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://wa.me/919446842216" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       
-      <!-- Quick Links -->
       <div class="footer-col">
         <h3>Explore</h3>
         <div class="footer-contact" style="flex-direction: column; align-items: flex-start;">
           <a href="#about"><i class="fas fa-angle-right"></i> About Us</a>
           <a href="#dormitory"><i class="fas fa-angle-right"></i> Our Dorms</a>
-          <a href="#restrooms"><i class="fas fa-angle-right"></i> Facilities</a>
-          <a href="#activities"><i class="fas fa-angle-right"></i> Activities</a>
+          <a href="#faq"><i class="fas fa-angle-right"></i> FAQs</a>
+          <a href="#location"><i class="fas fa-angle-right"></i> Location</a>
         </div>
       </div>
       
-      <!-- Contact Details -->
       <div class="footer-col">
         <h3>Contact Us</h3>
         <div class="footer-contact" style="flex-direction: column;">
