@@ -26,9 +26,11 @@ jobs:
       - name: Run generation script & bundle assets
         run: |
           python build.py
-          # Copy your main homepage and images into the output folder so they publish together
-          cp index.html output/
-          cp *.jpeg output/
+          # Copy your main homepage and ALL image, logo, and favicon formats into the output folder
+          cp index.html output/ || true
+          cp *.jpeg output/ || true
+          cp *.png output/ || true
+          cp *.svg output/ || true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
