@@ -1717,110 +1717,703 @@
 
   </section>
 
-<!-- OTA BOOKING PLATFORMS -->
+<!-- ==============================
+     OTA BOOKING PLATFORMS
+     ============================== -->
+
+<style>
+/* OTA SECTION */
+
+.ota-section {
+  padding: 75px 20px;
+  background:
+    linear-gradient(
+      rgba(244, 235, 225, 0.96),
+      rgba(244, 235, 225, 0.96)
+    );
+  border-top: 3px solid #D84315;
+  text-align: center;
+}
+
+.ota-section .section-title {
+  margin-bottom: 12px;
+}
+
+.ota-section .section-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #6d5a50;
+}
+
+
+/* Small heading badge */
+
+.ota-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 7px 15px;
+  border-radius: 30px;
+  background: #3E2723;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.ota-badge i {
+  color: #FFD54F;
+}
+
+
+/* OTA GRID */
+
+.ota-grid {
+  width: 100%;
+  max-width: 1100px;
+  margin: 42px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+
+/* OTA CARD */
+
+.ota-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 125px;
+  padding: 22px;
+
+  background: #ffffff;
+  border: 1px solid rgba(62, 39, 35, 0.10);
+  border-radius: 18px;
+
+  text-decoration: none !important;
+  color: #3E2723 !important;
+
+  box-shadow:
+    0 7px 25px rgba(62, 39, 35, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* Hover */
+
+.ota-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(216, 67, 21, 0.35);
+
+  box-shadow:
+    0 15px 35px rgba(62, 39, 35, 0.15);
+}
+
+
+/* LOGO BOX */
+
+.ota-logo-box {
+  width: 68px;
+  height: 68px;
+  min-width: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #faf7f3;
+
+  border: 1px solid #eee2d8;
+  border-radius: 14px;
+
+  margin-right: 17px;
+
+  overflow: hidden;
+}
+
+
+/* Actual logo */
+
+.ota-logo-box img {
+  max-width: 52px;
+  max-height: 42px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* Fallback logo */
+
+.ota-fallback {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  color: #3E2723;
+}
+
+
+/* CARD CONTENT */
+
+.ota-content {
+  flex: 1;
+  text-align: left;
+}
+
+.ota-content h3 {
+  margin: 0 0 6px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  color: #3E2723;
+}
+
+.ota-content p {
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+
+  color: #81736c;
+}
+
+
+/* ARROW */
+
+.ota-arrow {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #F4EBE1;
+  color: #3E2723;
+
+  transition: all 0.25s ease;
+}
+
+.ota-card:hover .ota-arrow {
+  background: #D84315;
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+
+/* BOOKING BUTTON */
+
+.ota-booking-label {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  color: #D84315;
+}
+
+
+/* DIRECT BOOKING */
+
+.direct-booking {
+  max-width: 1100px;
+
+  margin: 35px auto 0;
+  padding: 22px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: #3E2723;
+  border-radius: 18px;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(62, 39, 35, 0.18);
+}
+
+.direct-booking-text {
+  text-align: left;
+}
+
+.direct-booking-text h3 {
+  margin: 0 0 5px;
+
+  font-size: 1.05rem;
+}
+
+.direct-booking-text p {
+  margin: 0;
+
+  color: #e8dcd3;
+  font-size: 0.82rem;
+}
+
+
+.direct-booking-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  background: #25D366;
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+
+  font-weight: 700;
+  font-size: 0.85rem;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+}
+
+.direct-booking-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(0,0,0,0.2);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .ota-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .ota-section {
+    padding: 55px 15px;
+  }
+
+  .ota-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .ota-card {
+    min-height: 105px;
+    padding: 17px;
+  }
+
+  .ota-logo-box {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    margin-right: 14px;
+  }
+
+  .ota-logo-box img {
+    max-width: 45px;
+    max-height: 35px;
+  }
+
+  .ota-content h3 {
+    font-size: 0.98rem;
+  }
+
+  .ota-content p {
+    font-size: 0.78rem;
+  }
+
+  .direct-booking {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 18px;
+  }
+
+  .direct-booking-text {
+    text-align: center;
+  }
+
+  .direct-booking-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+</style>
+
+
 <section id="booking-platforms" class="ota-section">
 
-  <h2 class="section-title">Book Cowboy Dorms Online</h2>
+  <!-- Badge -->
+  <div class="ota-badge">
+    <i class="fas fa-shield-alt"></i>
+    <span>Trusted Booking Platforms</span>
+  </div>
+
+
+  <h2 class="section-title">
+    Book Cowboy Dorms Online
+  </h2>
+
 
   <p class="section-subtitle">
-    Find Cowboy Dorms on your preferred booking platform and reserve your stay near Cochin International Airport.
+    Choose your preferred booking platform and reserve your stay
+    at Cowboy Dorms near Cochin International Airport.
   </p>
+
+
+  <!-- OTA CARDS -->
 
   <div class="ota-grid">
 
-    <!-- Booking.com -->
+
+    <!-- BOOKING.COM -->
+
     <a
       href="https://www.booking.com/Share-PBlnDGQ"
       target="_blank"
       rel="noopener noreferrer"
       class="ota-card"
+      aria-label="Book Cowboy Dorms on Booking.com"
     >
-      <span class="ota-logo booking-logo">B.</span>
-      <div class="ota-content">
-        <h3>Booking.com</h3>
-        <p>Check availability & book</p>
+
+      <div class="ota-logo-box">
+
+        <img
+          src="https://cdn.simpleicons.org/bookingdotcom/003580"
+          alt="Booking.com"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <span class="ota-fallback">B.</span>
+
       </div>
-      <i class="fas fa-arrow-right"></i>
+
+
+      <div class="ota-content">
+
+        <h3>Booking.com</h3>
+
+        <p>
+          Check availability & book your stay
+        </p>
+
+        <span class="ota-booking-label">
+          View property
+        </span>
+
+      </div>
+
+
+      <span class="ota-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+
     </a>
 
 
-    <!-- Agoda -->
+
+    <!-- AGODA -->
+
     <a
       href="https://www.agoda.com/cowboy-dorms-backpacker-hostel/hotel/kochi-in.html?cid=1844104&ds=nBcATnSF80iWB2YO"
       target="_blank"
       rel="noopener noreferrer"
       class="ota-card"
+      aria-label="Book Cowboy Dorms on Agoda"
     >
-      <span class="ota-logo agoda-logo">A</span>
-      <div class="ota-content">
-        <h3>Agoda</h3>
-        <p>Book your dorm bed</p>
+
+      <div class="ota-logo-box">
+
+        <img
+          src="https://cdn.simpleicons.org/agoda/5A2D82"
+          alt="Agoda"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <span class="ota-fallback">A</span>
+
       </div>
-      <i class="fas fa-arrow-right"></i>
+
+
+      <div class="ota-content">
+
+        <h3>Agoda</h3>
+
+        <p>
+          Book your dorm bed online
+        </p>
+
+        <span class="ota-booking-label">
+          View property
+        </span>
+
+      </div>
+
+
+      <span class="ota-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+
     </a>
 
 
-    <!-- Hostelworld -->
+
+    <!-- HOSTELWORLD -->
+
     <a
       href="https://www.hostelworld.com/pwa/hosteldetails.php/Cowboy-Dorms-Backpacker-Hostel/Neduvannoor/341353"
       target="_blank"
       rel="noopener noreferrer"
       class="ota-card"
+      aria-label="Book Cowboy Dorms on Hostelworld"
     >
-      <span class="ota-logo hostelworld-logo">HW</span>
-      <div class="ota-content">
-        <h3>Hostelworld</h3>
-        <p>View dorms & traveller reviews</p>
+
+      <div class="ota-logo-box">
+
+        <img
+          src="https://cdn.simpleicons.org/hostelworld/F15A24"
+          alt="Hostelworld"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <span class="ota-fallback">HW</span>
+
       </div>
-      <i class="fas fa-arrow-right"></i>
+
+
+      <div class="ota-content">
+
+        <h3>Hostelworld</h3>
+
+        <p>
+          Discover our dorms & traveller reviews
+        </p>
+
+        <span class="ota-booking-label">
+          View property
+        </span>
+
+      </div>
+
+
+      <span class="ota-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+
     </a>
 
 
-    <!-- MakeMyTrip -->
+
+    <!-- MAKEMYTRIP -->
+
     <a
       href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=202609201241258602"
       target="_blank"
       rel="noopener noreferrer"
       class="ota-card"
+      aria-label="Book Cowboy Dorms on MakeMyTrip"
     >
-      <span class="ota-logo mmt-logo">MMT</span>
-      <div class="ota-content">
-        <h3>MakeMyTrip</h3>
-        <p>Check rooms & availability</p>
+
+      <div class="ota-logo-box">
+
+        <img
+          src="https://cdn.simpleicons.org/makemytrip/0086FF"
+          alt="MakeMyTrip"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <span class="ota-fallback">MMT</span>
+
       </div>
-      <i class="fas fa-arrow-right"></i>
+
+
+      <div class="ota-content">
+
+        <h3>MakeMyTrip</h3>
+
+        <p>
+          Check rooms & availability
+        </p>
+
+        <span class="ota-booking-label">
+          View property
+        </span>
+
+      </div>
+
+
+      <span class="ota-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+
     </a>
 
 
-    <!-- Goibibo -->
+
+    <!-- GOIBIBO -->
+
     <a
       href="https://www.goibibo.com/hotels/hotel-details/?searchText=Cowboy%20Dorms&locusId=CTCOK&locusType=city&cityCode=CTCOK&cc=IN&giHotelId=202609201241258602&mmtId=202609201241258602&topHtlId=202609201241258602&sType=hotel"
       target="_blank"
       rel="noopener noreferrer"
       class="ota-card"
+      aria-label="Book Cowboy Dorms on Goibibo"
     >
-      <span class="ota-logo goibibo-logo">goibibo</span>
-      <div class="ota-content">
-        <h3>Goibibo</h3>
-        <p>Check availability & book</p>
+
+      <div class="ota-logo-box">
+
+        <img
+          src="https://cdn.simpleicons.org/goibibo/ED1C24"
+          alt="Goibibo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <span class="ota-fallback">GI</span>
+
       </div>
-      <i class="fas fa-arrow-right"></i>
+
+
+      <div class="ota-content">
+
+        <h3>Goibibo</h3>
+
+        <p>
+          Check availability & book online
+        </p>
+
+        <span class="ota-booking-label">
+          View property
+        </span>
+
+      </div>
+
+
+      <span class="ota-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+
     </a>
 
 
-    <!-- TripAdvisor -->
+
+    <!-- TRIPADVISOR -->
+
     <a
       href="https://www.tripadvisor.in/Hotel_Review-g1973642-d34702424-Reviews-Cowboy_Dorms_Backpackers_Hostel-Aluva_Kochi_Cochin_Ernakulam_District_Kerala.html"
       target="_blank"
       rel="noopener noreferrer"
       class="ota-card"
+      aria-label="View Cowboy Dorms on TripAdvisor"
     >
-      <span class="ota-logo tripadvisor-logo">TA</span>
-      <div class="ota-content">
-        <h3>TripAdvisor</h3>
-        <p>Read guest reviews</p>
+
+      <div class="ota-logo-box">
+
+        <img
+          src="https://cdn.simpleicons.org/tripadvisor/34E0A1"
+          alt="TripAdvisor"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <span class="ota-fallback">TA</span>
+
       </div>
-      <i class="fas fa-arrow-right"></i>
+
+
+      <div class="ota-content">
+
+        <h3>TripAdvisor</h3>
+
+        <p>
+          Read guest reviews & explore our listing
+        </p>
+
+        <span class="ota-booking-label">
+          View reviews
+        </span>
+
+      </div>
+
+
+      <span class="ota-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+
+    </a>
+
+
+  </div>
+
+
+
+  <!-- DIRECT BOOKING -->
+
+  <div class="direct-booking">
+
+    <div class="direct-booking-text">
+
+      <h3>
+        Prefer to book directly?
+      </h3>
+
+      <p>
+        Contact Cowboy Dorms on WhatsApp for direct booking assistance.
+      </p>
+
+    </div>
+
+
+    <a
+      href="https://wa.me/919446842216?text=Hi%20Cowboy%20Dorms,%20I%20would%20like%20to%20book%20a%20dorm%20bed."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="direct-booking-btn"
+    >
+
+      <i class="fab fa-whatsapp"></i>
+
+      Book via WhatsApp
+
     </a>
 
   </div>
