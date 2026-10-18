@@ -1,9 +1,10 @@
+
 name: Build and Deploy pSEO Pages
 
 on:
   push:
     branches:
-      - main # Runs every time you update a file on the main branch
+      - main
 
 permissions:
   contents: write
@@ -11,6 +12,7 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -26,9 +28,17 @@ jobs:
       - name: Run generation script & bundle assets
         run: |
           python build.py
-          # Copy your main homepage and ALL image, logo, and favicon formats into the output folder
+          mkdir -p output
+
+          # Copy homepage
           cp index.html output/ || true
+
+          # Copy restored airport landing page
+          cp budget-stay-near-cochin-airport.html output/
+
+          # Copy website assets
           cp *.jpeg output/ || true
+          cp *.jpg output/ || true
           cp *.png output/ || true
           cp *.svg output/ || true
 
