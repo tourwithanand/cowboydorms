@@ -4,4 +4,5 @@
 - (27 Nov 2026) Focus: people who need a stay near Kochi (Cochin) airport, Aluva and nearby places. Goal: rank #1 for those searches (website + GBP).
 - 24 beds: 20 on OTAs, 4 kept for direct bookings. WhatsApp 919446842216.
 - GBP is active. GMB actions are done by Anand daily (you prepare them).
-- Still to confirm: men/women/mixed dorms, hourly stay and minimum hours, parking (cars/trucks), 24-hour check-in.
+- (27 Nov 2026) Dorms are MIXED dormitory (not men-only or women-only). Say "mixed AC dormitory" on the site and GBP; don't claim a separate female dorm.
+- Still to confirm: hourly stay and minimum hours, parking (cars/trucks), 24-hour check-in.
