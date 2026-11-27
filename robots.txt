@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /blog/social/
+
+Sitemap: https://cowboydorms.com/sitemap.xml
