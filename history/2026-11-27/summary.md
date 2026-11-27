@@ -78,3 +78,14 @@ This week: 2026-11-18 to 2026-11-24 · last week: 2026-11-11 to 2026-11-17
 - ion aluva: position 11, 7 impressions
 
 Totals last 7 days: 2 clicks, 881 impressions.
+
+## Website enquiries (Google Analytics, same weeks)
+
+- form_start: 3 this week / 3 last week
+- Organic Search sessions this week: 23
+
+Top pages by enquiries (28 days):
+
+- / – form_start: 4
+- /dormitory-near-cochin-airport.html – form_start: 3
+- /budget-stay-near-cochin-airport.html – form_start: 1
