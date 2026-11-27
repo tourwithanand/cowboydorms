@@ -16,7 +16,7 @@ Optional variable GA4_PROPERTY (numeric property ID); default below.
 """
 import csv, json, os, re, sys
 
-DEFAULT_PROPERTY = ""  # set the repo variable GA4_PROPERTY
+DEFAULT_PROPERTY = "555751922"  # Cowboy Dorms GA4 property (repo variable GA4_PROPERTY overrides)
 LEAD_RE = re.compile(r"whatsapp|call|phone|tel|lead|form|enquir|generate_lead|book", re.I)
 
 
