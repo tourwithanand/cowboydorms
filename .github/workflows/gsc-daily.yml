@@ -1,0 +1,45 @@
+name: Search Console daily export (free)
+# Every morning, save Google Search Console data as CSV on the `seo-data` branch
+# (not main, so it never triggers a site deploy). The daily SEO task reads it.
+# Needs the secret GSC_SA_JSON (Google Cloud service account key, free) — see
+# .github/scripts/gsc_export.py. Without the secret the job just skips.
+on:
+  schedule:
+    - cron: "10 23 * * *"   # 04:40 IST, before the daily SEO task
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet google-api-python-client google-auth
+      - name: Export
+        env:
+          GSC_SA_JSON: ${{ secrets.GSC_SA_JSON }}
+          GSC_SITE: ${{ vars.GSC_SITE }}
+        run: python .github/scripts/gsc_export.py out
+      - name: Export Google Analytics (enquiries)
+        continue-on-error: true
+        env:
+          GSC_SA_JSON: ${{ secrets.GSC_SA_JSON }}
+          GA4_PROPERTY: ${{ vars.GA4_PROPERTY }}
+        run: python .github/scripts/ga4_export.py out
+      - name: Save to seo-data branch
+        run: |
+          [ -d out/latest ] || { echo "Nothing exported."; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin seo-data >/dev/null; then
+            git fetch -q origin seo-data && git worktree add -q data origin/seo-data && cd data && git checkout -q -B seo-data
+          else
+            git worktree add -q --detach data && cd data && git checkout -q --orphan seo-data && git rm -rq . && rm -rf ./*
+          fi
+          d=$(date -u +%F)
+          mkdir -p latest "history/$d"
+          cp ../out/latest/* latest/ && cp ../out/latest/* "history/$d/"
+          git add -A && git commit -q -m "Search Console export $d" && git push -q origin seo-data || echo "No changes."
