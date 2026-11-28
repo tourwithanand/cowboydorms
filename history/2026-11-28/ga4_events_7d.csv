@@ -1,8 +1,8 @@
 event,this_week,last_week
-page_view,60,46
-session_start,46,39
-first_visit,28,31
-user_engagement,25,23
-scroll,13,3
-click,10,5
-form_start,4,3
+page_view,85,41
+session_start,53,34
+user_engagement,43,20
+first_visit,33,30
+scroll,14,4
+click,11,6
+form_start,5,3

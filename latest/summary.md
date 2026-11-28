@@ -81,11 +81,11 @@ Totals last 7 days: 2 clicks, 852 impressions.
 
 ## Website enquiries (Google Analytics, same weeks)
 
-- form_start: 4 this week / 3 last week
-- Organic Search sessions this week: 34
+- form_start: 5 this week / 3 last week
+- Organic Search sessions this week: 37
 
 Top pages by enquiries (28 days):
 
-- / – form_start: 5
+- / – form_start: 6
 - /dormitory-near-cochin-airport.html – form_start: 3
 - /budget-stay-near-cochin-airport.html – form_start: 1
