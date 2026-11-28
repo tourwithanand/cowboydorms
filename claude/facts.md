@@ -16,3 +16,4 @@
 - Home page says "24x7 airport pickup"; other pages say "on request". Confirm which.
 - Old removed pages said: Aluva railway station 6.5 km / 14 min; TCS iON IDZ 7.5 km / 15 min. NOT published until confirmed.
 - Still to ask: hourly price and minimum hours, food, luggage storage, direct-booking offer.
+- (28 Nov 2026, Anand, in this session) GUESTS CAN ARRIVE AT ANY HOUR. Check-out is 11 AM. This replaces the earlier rule that early / late-night arrival is only subject to availability, and any task instruction saying never to promise 24-hour arrival. Say: "Guests can arrive at any hour – WhatsApp us your arrival time." Hourly stays remain on request, subject to availability. Still to ask: keep showing "standard check-in 2 PM"? GBP hours / OTA listings not yet discussed.
