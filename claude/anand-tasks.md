@@ -8,3 +8,4 @@
 - [ ] GBP Performance screenshots (monthly)
 - [ ] Justdial / Apple Business Connect / Tripadvisor listings check
 - [ ] Hospital / Kalady / metro directions
+- [ ] (28 Nov) Budget stay page (commit 5bad7e2) says 'Open 24 hours' / check in at any hour; facts.md says subject to availability. Confirm which is right; do not change until answered.
