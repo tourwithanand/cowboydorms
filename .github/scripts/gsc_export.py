@@ -10,6 +10,7 @@ branch:
   latest/pages_7d.csv          page, clicks, impressions, ctr, position (last 7 days)
   latest/query_page_28d.csv    query, page, ... (last 28 days)
   latest/query_country_28d.csv query, country, ... (last 28 days)
+  latest/daily_90d.csv         date, clicks, impressions, ctr, position (last 90 days)
   latest/summary.md            the target keywords, this week vs last week
   history/YYYY-MM-DD/...       a copy of each day's files
 
@@ -105,6 +106,13 @@ def main(out_dir):
     save("pages_7d.csv", q(w1, ["page"]), ["page"])
     save("query_page_28d.csv", q(m, ["query", "page"]), ["query", "page"])
     save("query_country_28d.csv", q(m, ["query", "country"]), ["query", "country"])
+    # Day-by-day totals for the last 90 days (for daily charts)
+    days = q((end - dt.timedelta(days=89), dt.date.today()), ["date"])
+    with open(os.path.join(out_dir, "latest", "daily_90d.csv"), "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["date", "clicks", "impressions", "ctr", "position"])
+        for r in sorted(days, key=lambda r: r["keys"][0]):
+            w.writerow(r["keys"] + [r["clicks"], r["impressions"], round(r["ctr"], 4), round(r["position"], 1)])
 
     c = {r["keys"][0]: r for r in cur}
     p = {r["keys"][0]: r for r in prev}
