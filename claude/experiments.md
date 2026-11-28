@@ -6,3 +6,5 @@ Queries 7d: "tcs ion digital zone (idz), aluva" 164 impr/0/11.4; "tcs ion aluva"
 Page /hostel-near-aluva-railway-station/. Before 7d: 20 impr, 0 clicks, pos 7.3. 28d "dormitory near aluva railway station" 41/1/8.9; "dormitory in aluva railway station" 19/0/8.1.
 ## E3 Redirects (PR #4)
 budget-stay-near-tcs-ion-aluva, stay-near-aluva-metro-station (28d "cowboy dorms aluva" 7/1/4.3), sabarimala-transit-stay-aluva, budget-stay-near-kochi-airport.
+## E4 Arrival wording (PR #5, merged 2026-11-28)
+Home, budget, hourly, TCS, station pages: "guests can arrive at any hour". Shares pages with E1/E2.
